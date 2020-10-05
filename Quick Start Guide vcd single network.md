@@ -120,60 +120,13 @@ Before continuing with the rest of this Quick Start Guide, be sure to print [App
 ![](https://github.com/CacheboxInc/HDM-documentation/blob/master/images/Validate-network-2.png)
 
 * Check to ensure the appliance is powered on
-ssh to the HDM appliance that was deployed in step 4. Use the IP given on the “VM Network” (Management Network)
-* Use the following credentials:
-  * UID: root
-  * Password: admin@123
-* Use this session to validate connectivity
 
-**Use the following commands to test connectivity between the endpoints:**
-```
-$ curl -k https://<prem_vcenter_fqdn>
-
-<!DOCTYPE html PUBLIC “-//W3C//DTD XHTML 1.0 Transitional//EN” “http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd”>
-
-:
-
-:
-
-</body>
-
-</html>
-```
- 
-
-If the system states, curl: (7) Failed to connect to 10.10.48.2 port 443: Connection refused, the connectivity needs to be debugged.
-
- 
-```
-$ curl -k https://<cloud_vcenter_fqdn>
-
-<!DOCTYPE html PUBLIC “-//W3C//DTD XHTML 1.0 Transitional//EN” “http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd”>
-
-:
-
-:
-
-</body>
-
-</html>
- ```
-
-Ping the on-premises ESXi to verify connectivity.
-
- 
-```
-$ curl -k https://<on_prem_esxi_ip>
-
-<!DOCTYPE html PUBLIC “-//W3C//DTD XHTML 1.0 Transitional//EN” “http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd”>
-```
- 
 # Step 6: On-Premises Deployment
 
 ## Add on-premises vCenter
 * Locate the IP address of the appliance
 * Enter https://<appliance-ip> in the appliance web interface
-* Login to the appliance web UI using default password: admin@123
+* Login to the appliance web UI using default password: 2Hdm$aK!N@h!
 
 After login, select ![](https://github.com/CacheboxInc/HDM-documentation/blob/master/images/vCenter-icon.png)
 
