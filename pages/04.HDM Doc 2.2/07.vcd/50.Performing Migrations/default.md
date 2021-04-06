@@ -146,13 +146,21 @@ Steps
 
 6. If the Warm and Cold Migration type has been chosen, select the target resources on the cloud where the virtual machine will be migrated
 
+<<<<<<< HEAD
     * Select the Vapp and storage profile
+=======
+
+>>>>>>> d46a3024d15ab30ee56b534dbafc828971cf8cf2
 ![alt_text](images-vcd/image-0.png?classes=content-img "image_tooltip")
 
 7. If the Warm and Cold Migration type has been selected, map the network for the VM
 
+<<<<<<< HEAD
 
      * Choose the Static IP or DHCP which ever is required.  
+=======
+    * Select the Vapp and storage profile
+>>>>>>> d46a3024d15ab30ee56b534dbafc828971cf8cf2
 ![alt_text](images-vcd/image-1.png?classes=content-img "image_tooltip")
 ![alt_text](images-vcd/image-2.png?classes=content-img "image_tooltip")
 
