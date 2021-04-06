@@ -313,6 +313,13 @@ Use the Fence vApp option to use same MAC/IP. Fencing allows identical virtual m
 
 Migrating Windows VMs with an Evaluation License will result in the migrated VM failing the guest OS's license check. The operating system enforces this behavior, and the VM will power off after 45 minutes. This is not an HDM product bug but the license enforcement of Microsoft. (Ref: **DP-2879**)
 
+###### **Migration fails because pre-migration check bug**
+
+Premigration checks are done before initiating any migration. For warm or TBC migrations few out of the many checks are
+1. Check that one cdrom drive is present.
+1. Check prepare-to-migrate step has been run.
+If a cdrom drive is not present we will display a warning that a cdrom drive will be added. However if the “prepare-to-migrate” has not been run this warning overrides this check and the migration can proceed. However since the prepare-to-migrate has not been run the migration will eventually fail. (Ref:CP-5713)
+
 # HDM System Health
 
 
