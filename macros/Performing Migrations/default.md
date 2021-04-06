@@ -105,6 +105,7 @@ Pre-requisites
 1. _Prepare to Migrate_ has been successful on the VM (For warm migration only)
 2. The HDM SPBM policy has been applied to all disks within the VM (For warm migration only)
 3. VM migration with multiple CD/DVD Devices is not supported. If you attempt to migrate such a VM an error will be reported. Please remove and retry migration
+4. Migrating Windows VMs with an Evaluation License will result in the migrated VM failing the guest OS's license check. The operating system enforces this behavior, and the VM will power off after 45 minutes. This is not an HDM product bug but the license enforcement of Microsoft.
 
 Steps
 
