@@ -148,9 +148,12 @@ Steps
 
 ![alt_text](images/image38.png?classes=content-img "image_tooltip")
 
+
 7. If the Warm and Cold Migration type has been selected, map the network for the VM
 
 ![alt_text](images/image39.png?classes=content-img "image_tooltip")
+
+
 
 8. Confirm all selections and select _MIGRATE_
 
