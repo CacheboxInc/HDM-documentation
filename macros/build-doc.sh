@@ -35,7 +35,7 @@ echo VCD Build migration >> build.log
 echo ============= >> build.log
 m4 -dftl VCD/ibm-vcd-Migration.m4 >  ../pages/04.HDM\ Doc\ 2.2/07.vcd/50.Performing\ Migrations/default.md 2>>build.log
 ### Trouble Shooting
-m4 -dtfl VCS/VCS-Trouble-shoot.m4 > ../pages/04.HDM\ Doc\ 2.2/07.vcd/80.Troubleshooting\ Guide/default.md 2>>build.log
+m4 -dtfl VCD/ibm-vcd-Trouble-shoot.m4 > ../pages/04.HDM\ Doc\ 2.2/07.vcd/80.Troubleshooting\ Guide/default.md 2>>build.log
 
 ## CDS
 echo CDS Build start >> build.log

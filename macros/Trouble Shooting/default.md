@@ -190,6 +190,12 @@ This issue can occur when CA certificate details are provided for the key manage
 
 ifdef(~sTARGET_VCD~e, ~s
 
+###### **The start operation was aborted because you would exceed your running virtual machine quota**
+When migration fails with error in Status: “Client received SOAP Fault from server. The object has already been deleted or has not been completely created.” Download the HDM Logs as mentioned in the “Support Logs” section in this document. Search the logs for 
+> java.util.concurrent.ExecutionException: com.vmware.vcloud.api.presentation.service.OperationLimitsExceededException: The start operation was aborted because you would exceed your running virtual machine quota. 2 new virtual machine(s) would have been started, and you are already running 10 of a limit of 10. 3 - com.vmware.vcloud.api.presentation.service.OperationLimitsExceededException: The start operation was aborted because you would exceed your running virtual machine quota. 2 new virtual machine(s) would have been started, and you are already running 10 of a limit of 10. 4 - The start operation was aborted because you would exceed your running virtual machine quota. 2 new virtual machine(s) would have been started, and you are already running 10 of a limit of 10.
+
+If you find this then you have exceeded your quota for the VCD environment. You will need to contact your system administrator to increase your limit.
+
 ###### **HDM Disk Controller Support**
 
 Following are known limitations with virtual machine disk controller configurations for migration to VMware Cloud Director. HDM does not support migration of:
