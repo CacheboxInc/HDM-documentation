@@ -320,6 +320,7 @@ Failures for migrate, migrate back, on-premises deployment, and add cloud are sh
 If an HDM cloud component VM remains shutdown for an extended period of time, the health of the failed HDM components may not be reflected in the PrimaryIO appliance. However, the failed component will be detected and alerts can be seen by selecting _Home_, followed by _HDM_, then _Dashboard_. Once the component VM is successfully rebooted, the appliance will correctly reflect the health of all components. (Ref: **CP-4647**)
 
 
+
 # Failure Handling in HDM
 
 
