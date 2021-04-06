@@ -348,6 +348,10 @@ Failures for migrate, migrate back, on-premises deployment, and add cloud are sh
 
 If an HDM cloud component VM remains shutdown for an extended period of time, the health of the failed HDM components may not be reflected in the PrimaryIO appliance. However, the failed component will be detected and alerts can be seen by selecting _Home_, followed by _HDM_, then _Dashboard_. Once the component VM is successfully rebooted, the appliance will correctly reflect the health of all components. (Ref: **CP-4647**)
 
+###### **Warm Migration or Try Before Commit fails**
+Warm Migration or TBC can fail if static IP specified during the migration is not part of the subnet on the cloud network. In this case an error is flagged in the events in VCD/vCenter with “Invalid network parameter: Specified address is not in the subnet range.” The same failure will happen if you specify an IP address that is already in use on the cloud the error in this case would be “The following IP/MAC addresses have already been used by running virtual machines: MAC addresses: IP addresses: ....
+Use the Fence vApp option to use same MAC/IP. Fencing allows identical virtual machines in different vApps to be powered on without conflict, by isolating the MAC and IP addresses of the virtual machines.” (Ref: DP-2887)
+
 # Failure Handling in HDM
 
 
