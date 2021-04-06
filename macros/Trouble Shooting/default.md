@@ -343,7 +343,7 @@ Use the Fence vApp option to use same MAC/IP. Fencing allows identical virtual m
 
 ### Windows VM power-off after successful migration
 
-Migrating Windows VMs with an Evaluation License will result in the migrated VM failing the guest OS's license check. The operating system enforces this behavior, and the VM will power off after 45 minutes. This is not an HDM product bug but the license enforcement of Microsoft.
+Migrating Windows VMs with an Evaluation License will result in the migrated VM failing the guest OS's license check. The operating system enforces this behavior, and the VM will power off after 45 minutes. This is not an HDM product bug but the license enforcement of Microsoft. (Ref: **DP-2879**)
 
 # HDM System Health
 
