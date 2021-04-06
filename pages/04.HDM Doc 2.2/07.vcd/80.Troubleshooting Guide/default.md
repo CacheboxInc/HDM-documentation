@@ -560,4 +560,9 @@ With non DRS or HA enabled clusters, when the appliance fails on an ESXi, the vA
 
 (Ref: **CP-4848**)
 
+# Misc
+
+###### **Download debug Logs fails on certain versions of chrome browser** 
+
+The Download debug Logs fails on chrome versions between 84.0.4147.135 and  88.0.4324.104. Please use firefox or a different version of chrome. (Ref: CP-5763)
 
