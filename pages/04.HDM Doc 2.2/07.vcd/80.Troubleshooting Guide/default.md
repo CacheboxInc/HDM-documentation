@@ -112,6 +112,21 @@ The HDM plugin fails to appear in the vCenter UI, despite having been registered
 4. Re-register the HDM plugin with the same vCenter it was deleted from.
 
 
+###### **Network configuration issues for on-cloud deployment **
+
+In case, On-Cloud Cloud Director is configured on different networks and resolved through different DNS settings. In this case On-Cloud Cloud Director will get added if correct DNS is set during Add Cloud, but ESXi resolution will fail resulting in Cold and Warm migration Failure. 
+
+Similarly, “Add Cloud” may fail if On-Cloud Cloud Director has been configured with FQDN and DNS to resolve vCenter is incorrect or is not provided during the operation.
+
+**Resolution: ** Customers should add rules in their Network to forward resolution of these FQDN to the correct DNS, whether it is for the vCenter or ESXi.
+
+
+###### **Installation Failed - Exception during container create syncd-cloud **
+
+This can happen if the Cloud Director cloud end-point is not reachable. The current operation being performed (deployment, mugration) will fail. The connectivity to cloud end-point needs to be re-established before continuing. (Ref : **CP-5596**) 
+
+
+
 
 ###### **The HDM deployment for the on-premises cluster fails if vCenter reflects an invalid state**
 
@@ -191,6 +206,44 @@ This issue can occur when CA certificate details are provided for the key manage
 
 
 
+###### **The start operation was aborted because you would exceed your running virtual machine quota**
+When migration fails with error in Status: “Client received SOAP Fault from server. The object has already been deleted or has not been completely created.” Download the HDM Logs as mentioned in the “Support Logs” section in this document. Search the logs for 
+> java.util.concurrent.ExecutionException: com.vmware.vcloud.api.presentation.service.OperationLimitsExceededException: The start operation was aborted because you would exceed your running virtual machine quota. 2 new virtual machine(s) would have been started, and you are already running 10 of a limit of 10. 3 - com.vmware.vcloud.api.presentation.service.OperationLimitsExceededException: The start operation was aborted because you would exceed your running virtual machine quota. 2 new virtual machine(s) would have been started, and you are already running 10 of a limit of 10. 4 - The start operation was aborted because you would exceed your running virtual machine quota. 2 new virtual machine(s) would have been started, and you are already running 10 of a limit of 10.
+If you find this then you have exceeded your quota for the VCD environment. You will need to contact your system administrator to increase your limit.
+
+###### **HDM Disk Controller Support**
+
+Following are known limitations with virtual machine disk controller configurations for migration to VMware Cloud Director. HDM does not support migration of:
+
+
+
+1. Virtual machines having IDE and NVMe based virtual disks.
+2. Virtual machines with USB or ISO attached during migration.
+
+###### **VM fails to poweron on Organization VDC after migration is successfully completed. **
+
+This can happen is the CPU resources are exhausted for the Organization VDC into which the migration happened. Do update the CPU resources and try powering-on the VM. (Ref: **CP-5469**) 
+
+###### **IPs may not be allocated for virtual machines having Ubuntu16 or SLEL16 Operating System post migration**
+This is a known issue with these operating systems. IP addresses will need to be allocated manually. (Ref : **CP-5626**)
+
+
+###### **Cold migration may be retried even after the user cancelled the vCenter task**
+
+If the vCentre task for cold migration is cancelled by the user, the existing task gets cancelled. However, HDM re-attempts, the cold migration till all the retry attempts are over. The user should cancel all the re-attempts, so as to truly cancel the operation, (Ref: **CP-4365)**
+
+
+###### **Migration failure due to insufficient space on the target**
+
+Even though HDM checks free space on the target of a warm migration, the available space on target cannot always be pre-validated because actual storage required for thin disks can vary. This may lead to failure because of insufficient storage space during migration. 
+
+User should explicitly make sure that the target has enough free space before attempting to migrate. 
+
+(Ref: **CP-4301)**
+
+
+
+
 ###### **Applications on migrated VMs may fail due to incorrect network mapping specified**
 
 During add cloud operation, users should specify the correct default application network on-cloud or map  on-premises network to on-cloud network. Failing to do so, the VM migration may succeed but applications on the migrated VMs may fail. In the SQS based migration, the network mapping can be specified at the migration time. (Ref: **CP-4433)**
@@ -252,20 +305,6 @@ The Cloud vCenter enables a few VMDK operations such as add/grow disks on the mi
 
 To warm migrate linked clones, attach the SPBM policy _HDM Analyzer Profile_ to the base VM of the linked clone.
 
-
-
-
-###### **Warm migration fails due to the inaccessibility of the cloud vCenter or ESXi in an FQDN based cloud environment **
-
-In an FQDN based deployment, HDM may not be able to resolve the cloud vCenter or ESXi, which can cause the warm migration to fail. During HDM installation, the DNS entry should have been configured to resolve the FQDN. If this is missing, manually add the DNS nameserver to the HDM cloud cache component, using the following procedure:
-
-1. Login to the cloud vCenter.
-2. Find the HDM cloud cache component VMs with the name _HDM-Cloud-Cache-*_.
-3. ssh into each HDM cloud cache component VM with root credentials and use the password _admin123_.
-4. Set the DNS server in /`etc/resolv.conf` to resolve the FQDN.
-5. Use the ping command to ensure that the FQDN is reachable.
-
-(Ref: **CP-4330**)
 
 
 
