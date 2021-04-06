@@ -132,14 +132,15 @@ Steps
 ifdef(~sTARGET_VCS~e, ~s
 ![alt_text](images/image38.png?classes=content-img "image_tooltip")
 ~e)
-ifdef(~sTARGET_VCD~e, ~s
+ifdef(~sTARGET_VCD~e, ~s    * Select the Vapp and storage profile
 ![alt_text](images-vcd/image-0.png?classes=content-img "image_tooltip")
 ~e)
 7. If the Warm and Cold Migration type has been selected, map the network for the VM
 ifdef(~sTARGET_VCS~e, ~s
 ![alt_text](images/image39.png?classes=content-img "image_tooltip")
 ~e)
-ifdef(~sTARGET_VCD~e, ~s    * Select the Vapp and storage profile
+ifdef(~sTARGET_VCD~e, ~s
+     * Choose the Static IP or DHCP which ever is required.  
 ![alt_text](images-vcd/image-1.png?classes=content-img "image_tooltip")
 ![alt_text](images-vcd/image-2.png?classes=content-img "image_tooltip")
 ~e)
