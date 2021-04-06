@@ -361,6 +361,7 @@ Migrating Windows VMs with an Evaluation License will result in the migrated VM 
 Premigration checks are done before initiating any migration. For warm or TBC migrations few out of the many checks are
 1. Check that one cdrom drive is present.
 1. Check prepare-to-migrate step has been run.
+
 If a cdrom drive is not present we will display a warning that a cdrom drive will be added. However if the “prepare-to-migrate” has not been run this warning overrides this check and the migration can proceed. However since the prepare-to-migrate has not been run the migration will eventually fail. (Ref:CP-5713)
 
 # HDM System Health
