@@ -34,7 +34,10 @@ For a Supported Windows OS we will
 
 # HDM - Component Interactions
 
-
+<!---
+The source document with the details is here
+https://docs.google.com/document/d/1NE57ykCOyp7xMLzDA-HLqZYsNmPA1M_ObQCw0gVkPNY/edit 
+-->
 ## Introduction
 
 The document describes the interactions between HDM components and VMware Infrastructure both on premise and on cloud. The document would describe the authentication mechanism, permissions and network connectivity required for these interactions.
