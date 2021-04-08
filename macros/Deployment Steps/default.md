@@ -380,7 +380,7 @@ ifdef(~sTARGET_VCD~e, ~s
 4. Select **Add Cloud**. This will open a wizard where you can select the resources needed to deploy the HDM components.
 5. Select the cloud type, then enter the cloud credentials and the cloud DNS. 
 ifdef(~sTARGET_VCD~e, ~s
-    Refer details gathered during deployment planning, as mentioned in "Deployment planning > Prepare Cloud for Deployment"section.
+    Refer details gathered during deployment planning, as mentioned in "Deployment planning > Prepare Cloud for Deployment" section.
 ~e)
 _Figure 22: HDM Cloud Wizard_
 
