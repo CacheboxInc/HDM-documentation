@@ -107,7 +107,7 @@ Similarly, “Add Cloud” may fail if On-Cloud Cloud Director has been configur
 
 ###### **Installation Failed - Exception during container create syncd-cloud **
 
-This can happen if the Cloud Director cloud end-point is not reachable. The current operation being performed (deployment, mugration) will fail. The connectivity to cloud end-point needs to be re-established before continuing. (Ref : **CP-5596**) 
+This can happen if the Cloud Director cloud end-point is not reachable. The current operation being performed (deployment, migration) will fail. The connectivity to cloud end-point needs to be re-established before continuing. (Ref : **CP-5596**) 
 
 
 ~e)
@@ -212,7 +212,7 @@ Following are known limitations with virtual machine disk controller configurati
 
 ###### **VM fails to poweron on Organization VDC after migration is successfully completed. **
 
-This can happen is the CPU resources are exhausted for the Organization VDC into which the migration happened. Do update the CPU resources and try powering-on the VM. (Ref: **CP-5469**) 
+This can happen if the CPU resources are exhausted for the Organization VDC into which the migration happened. Do update the CPU resources and try powering-on the VM. (Ref: **CP-5469**) 
 
 ###### **IPs may not be allocated for virtual machines having Ubuntu16 or SLEL16 Operating System post migration**
 This is a known issue with these operating systems. IP addresses will need to be allocated manually. (Ref : **CP-5626**)
