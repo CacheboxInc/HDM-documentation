@@ -183,6 +183,17 @@ Re-deployment on-premises can fail during configuration of the HDM ESXi Manager.
 
 # HDM Migrations
 
+##### **UEFI configured VM fails to boot on cloud, follow manual workaround**
+Certain unsupported OSes with a UEFI  boot loader configured get into efishell during boot. This is because the bios is unable to located the bootloader. To continue with the boot process the bootloaders path has to be specified manually in the efishell. The path for some of the commonly used OS and their versions is below. A similar solution can be adopted for EFI configured OSs not in this list.  7.4 EFI boot loader 
+
+centos fs0:\EFI\centos\shimx64.efi
+
+ubuntu EFI fs0:\EFI\ubuntu\grubx64.efi
+
+You might also find the following articles useful.
+
+https://kb.vmware.com/s/article/2061784
+
 ###### **Not able to connect or validate Key Manager. Please verify settings**
 
 This issue can occur when CA certificate details are provided for the key manager. Providing valid CA certificates for the key manager will resolve the issue. (Ref: **CP-5408**)

@@ -123,7 +123,7 @@ Similarly, “Add Cloud” may fail if On-Cloud Cloud Director has been configur
 
 ###### **Installation Failed - Exception during container create syncd-cloud **
 
-This can happen if the Cloud Director cloud end-point is not reachable. The current operation being performed (deployment, mugration) will fail. The connectivity to cloud end-point needs to be re-established before continuing. (Ref : **CP-5596**) 
+This can happen if the Cloud Director cloud end-point is not reachable. The current operation being performed (deployment, migration) will fail. The connectivity to cloud end-point needs to be re-established before continuing. (Ref : **CP-5596**) 
 
 
 
@@ -199,6 +199,17 @@ Re-deployment on-premises can fail during configuration of the HDM ESXi Manager.
 
 # HDM Migrations
 
+##### **UEFI configured VM fails to boot on cloud, follow manual workaround**
+Certain unsupported OSes with a UEFI  boot loader configured get into efishell during boot. This is because the bios is unable to located the bootloader. To continue with the boot process the bootloaders path has to be specified manually in the efishell. The path for some of the commonly used OS and their versions is below. A similar solution can be adopted for EFI configured OSs not in this list.  7.4 EFI boot loader 
+
+centos fs0:\EFI\centos\shimx64.efi
+
+ubuntu EFI fs0:\EFI\ubuntu\grubx64.efi
+
+You might also find the following articles useful.
+
+https://kb.vmware.com/s/article/2061784
+
 ###### **Not able to connect or validate Key Manager. Please verify settings**
 
 This issue can occur when CA certificate details are provided for the key manager. Providing valid CA certificates for the key manager will resolve the issue. (Ref: **CP-5408**)
@@ -228,7 +239,7 @@ Following are known limitations with virtual machine disk controller configurati
 
 ###### **VM fails to poweron on Organization VDC after migration is successfully completed. **
 
-This can happen is the CPU resources are exhausted for the Organization VDC into which the migration happened. Do update the CPU resources and try powering-on the VM. (Ref: **CP-5469**) 
+This can happen if the CPU resources are exhausted for the Organization VDC into which the migration happened. Do update the CPU resources and try powering-on the VM. (Ref: **CP-5469**) 
 
 ###### **IPs may not be allocated for virtual machines having Ubuntu16 or SLEL16 Operating System post migration**
 This is a known issue with these operating systems. IP addresses will need to be allocated manually. (Ref : **CP-5626**)

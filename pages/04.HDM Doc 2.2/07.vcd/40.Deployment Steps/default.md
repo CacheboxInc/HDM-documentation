@@ -359,6 +359,8 @@ _Figure 21: vCenter Cloud Listing_
 4. Select **Add Cloud**. This will open a wizard where you can select the resources needed to deploy the HDM components.
 5. Select the cloud type, then enter the cloud credentials and the cloud DNS. 
 
+Refer details gathered during deployment planning, as mentioned in "Deployment planning > Prepare Cloud for Deployment" section.
+
 _Figure 22: HDM Cloud Wizard_
 
 
@@ -370,10 +372,7 @@ _Figure 22: HDM Cloud Wizard_
 
 
 
-6. Select vDC, vApp and storage profile cloud where HDM components will be deployed (figure 23). You must use a Storage Profile of at least **10 IOPS/GB** or **standard** for deployment.
-
-_Figure 23: Select Cloud Cluster_
-![alt_text](images/image18.png?classes=content-img "image_tooltip")
+6. Select vDC, vApp cloud where HDM components will be deployed and proceed. 
 
 
 
@@ -471,7 +470,7 @@ _Figure 30: HDM Appliance Control Panel_
 
 
 
-![alt_text](images/image24.png?classes=content-img "image_tooltip")
+![alt_text](images/image24_new.png?classes=content-img "image_tooltip")
 
 
 In addition to the Appliance Control Panel, this information is also available on vCenter on the HDM plugin by selecting _Menu_, followed by _HDM_, _Administration_, _HDM Health_, and then _Component Health_.
