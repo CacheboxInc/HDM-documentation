@@ -380,7 +380,7 @@ ifdef(~sTARGET_VCD~e, ~s
 4. Select **Add Cloud**. This will open a wizard where you can select the resources needed to deploy the HDM components.
 5. Select the cloud type, then enter the cloud credentials and the cloud DNS. 
 ifdef(~sTARGET_VCD~e, ~s
-Refer details gathered during deployment planning, as mentioned in "Deployment planning > Prepare Cloud for Deployment" section.
+    Refer details gathered during deployment planning, as mentioned in "Deployment planning > Prepare Cloud for Deployment"section.
 ~e)
 _Figure 22: HDM Cloud Wizard_
 
@@ -409,7 +409,7 @@ _Figure 23: Select Cloud Cluster_
 ![alt_text](images/image15.png?classes=content-img "image_tooltip")
 ~e)
 
-7. Select the network and IP configuration for ON_CLOUD_HDM_NETWORK (HDM Internal Network) that will be used by HDM for VM boot and subsequent IO handling through the HDM components. Choose the IP allocation protocol: static, static pool, or DHCP (figure 24). If static IP address allocation is chosen, the unused IP addresses or IP ranges, along with the gateway and subnet mask, would need to be specified.
+7. Select the network and IP configuration for ON_CLOUD_HDM_NETWORK (HDM Internal Network) that will be used by HDM for VM boot and subsequent IO handling through the HDM components. Choose the IP allocation protocol: static (figure 24), static pool, or DHCP . If static IP address allocation is chosen, the unused IP addresses or IP ranges, along with the gateway and subnet mask, would need to be specified.
 
 _Figure 24: Network Configuration_
 
@@ -418,7 +418,7 @@ ifdef(~sTARGET_VCS~e, ~s
 ~e)
 
 ifdef(~sTARGET_VCD~e, ~s
-![alt_text](images/image19.png?classes=content-img "image_tooltip")
+![alt_text](images/image19_new.png?classes=content-img "image_tooltip")
 ~e)
 
 8. Select network IP configurations for the WAN. Choose the IP allocation protocol: static, static pool, or DHCP (figure 25). If static IP address allocation is chosen, the unused IP addresses or IP ranges, along with the gateway and subnet mask, domain search path, and one or more DNS and NTP servers, would need to be specified
@@ -430,7 +430,7 @@ ifdef(~sTARGET_VCS~e, ~s
 ~e)
 
 ifdef(~sTARGET_VCD~e, ~s
-![alt_text](images/image20.png?classes=content-img "image_tooltip")
+![alt_text](images/image20_new.png?classes=content-img "image_tooltip")
 ~e)
 
 9. Set WAN route configuration, so data traffic between the cloud and on-premises environments is possible. See the network planning section <a name="wan-cfg">[WAN Routing Configuration](../network%20planning/planning%20template/single%20network#wan-routing-configuration)</a>.
@@ -451,7 +451,10 @@ ifdef(~sTARGET_VCS~e, ~s
 ![alt_text](images/image37.png?classes=content-img "image_tooltip")
 ~e)
 
+
+ifdef(~sTARGET_VCS~e, ~s
 11. Select network mapping to enable the network categorization performed on-premises gets percolated to the cloud 
+~e)
 
 _Figure 27: Network Mapping_
 ifdef(~sTARGET_VCS~e, ~s
@@ -459,10 +462,20 @@ ifdef(~sTARGET_VCS~e, ~s
 ~e)
 
 ifdef(~sTARGET_VCD~e, ~s
-![alt_text](images/image22.png?classes=content-img "image_tooltip")
+10. Select network mapping to enable the network categorization performed on-premises gets percolated to the cloud 
 ~e)
 
+ifdef(~sTARGET_VCD~e, ~s
+![alt_text](images/image22_new.png?classes=content-img "image_tooltip")
+~e)
+
+ifdef(~sTARGET_VCD~e, ~s
+11. To submit the request and initiate the cloud deployment, select _FINISH_. This will create deployment tasks for the cloud components, which can be monitored in vCenter Tasks. The progress can also be seen in the HDM Clouds view (figure 29)
+~e)
+
+ifdef(~sTARGET_VCS~e, ~s
 12. To submit the request and initiate the cloud deployment, select _FINISH_. This will create deployment tasks for the cloud components, which can be monitored in vCenter Tasks. The progress can also be seen in the HDM Clouds view (figure 29).
+~e)
 
 ifdef(~sTARGET_VCD~e, ~s
 >>> **Attention**: 
@@ -489,14 +502,17 @@ ifdef(~sTARGET_VCD~e, ~s
 ![alt_text](images/image23.png?classes=content-img "image_tooltip")
 ~e)
 
-13. This will create deployment tasks for the cloud components. These tasks can be monitored in vCenter Tasks. The progress can also be seen in the HDM configuration view. 
-
-_Figure 29: HDM Clouds View_
 ifdef(~sTARGET_VCS~e, ~s
+13. This will create deployment tasks for the cloud components. These tasks can be monitored in vCenter Tasks. The progress can also be seen in the HDM configuration view. 
+_Figure 29: HDM Clouds View_
+
 ![alt_text](images/image24.png?classes=content-img "image_tooltip")
 ~e)
 
 ifdef(~sTARGET_VCD~e, ~s
+12. This will create deployment tasks for the cloud components. These tasks can be monitored in vCenter Tasks. The progress can also be seen in the HDM configuration view
+_Figure 29: HDM Clouds View_
+
 ![alt_text](images/image10.png?classes=content-img "image_tooltip")
 ~e)
 
