@@ -185,7 +185,7 @@ Re-deployment on-premises can fail during configuration of the HDM ESXi Manager.
 # HDM Migrations
 
 ##### **UEFI configured VM fails to boot on cloud, follow manual workaround**
-Certain unsupported OSes with a UEFI  boot loader configured get into efishell during boot. This is because the bios is unable to located the bootloader. To continue with the boot process the bootloaders path has to be specified manually in the efishell. The path for some of the commonly used OS and their versions is below. A similar solution can be adopted for EFI configured OSs not in this list.  7.4 EFI boot loader 
+Certain unsupported OSes with a UEFI  boot loader configured get into efishell during boot. This is because the bios is unable to located the bootloader. To continue with the boot process the bootloaders path has to be specified manually in the efishell. The path for some of the commonly used OS and their versions is below. A similar solution can be adopted for EFI configured OSs not in this list. (ref: **CP-5644**)
 
 centos fs0:\EFI\centos\shimx64.efi
 
