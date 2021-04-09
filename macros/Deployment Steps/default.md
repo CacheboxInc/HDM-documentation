@@ -267,7 +267,7 @@ ifdef(~sTARGET_VCD~e, ~s
 _Figure 16: HDM Installation Wizard_
 
 ifdef(~sTARGET_VCS~e, ~s
-![alt_text](images/image42.png?classes=content-img "image_tooltip")
+![alt_text](images/image42_new.png?classes=content-img "image_tooltip")
 ~e)
 
 ifdef(~sTARGET_VCD~e, ~s
@@ -284,7 +284,7 @@ ifdef(~sTARGET_VCS~e, ~s
 ifdef(~sTARGET_VCD~e, ~s
 ![alt_text](images/image40.png?classes=content-img "image_tooltip")
 ~e)
-9. To specify the internal network configurations, start by choosing the IP allocation protocol: static or DHCP (figure 18). The following details are required if static IP is chosen:
+9. To specify the internal network configurations, start by choosing the IP allocation protocol: static (figure 18) or DHCP. The following details are required if static IP is chosen:
 *   IP range
 *   Subnet mask
 *   Gateway
@@ -292,12 +292,10 @@ ifdef(~sTARGET_VCD~e, ~s
 *   DNS
 *   NTP
 
-    See the Deployment Requirements section for additional details on these requirements. These steps must be repeated for the following components:
-
-
-1. HDM Internal Network (HDM_Internal_Network)
-2. WAN Network (Uplink_WAN_Network)
-3. ESXi Network (ESXi_Network)
+   See the Deployment Requirements section for additional details on these requirements. These steps must be repeated for the following components:
+* HDM Internal Network (HDM_Internal_Network)
+* WAN Network (Uplink_WAN_Network)
+* ESXi Network (ESXi_Network)
 
 
 **Note:**
@@ -380,7 +378,7 @@ ifdef(~sTARGET_VCD~e, ~s
 4. Select **Add Cloud**. This will open a wizard where you can select the resources needed to deploy the HDM components.
 5. Select the cloud type, then enter the cloud credentials and the cloud DNS. 
 ifdef(~sTARGET_VCD~e, ~s
-    Refer details gathered during deployment planning, as mentioned in "Deployment planning > Prepare Cloud for Deployment" section.
+    Refer the details gathered during deployment planning, as mentioned in "Deployment planning > Prepare Cloud for Deployment" section.
 ~e)
 _Figure 22: HDM Cloud Wizard_
 
@@ -397,7 +395,7 @@ ifdef(~sTARGET_VCS~e, ~s
 ~e)
 
 ifdef(~sTARGET_VCD~e, ~s
-6. Select vDC, vApp cloud where HDM components will be deployed and proceed. 
+6. Select vDC, vApp where HDM components will be deployed on cloud and then proceed. 
 ~e)
 
 ifdef(~sTARGET_VCS~e, ~s
