@@ -274,7 +274,7 @@ _Figure 17: Resource Pool and Shared Datastore Selection_
 
 ![alt_text](images/image40.png?classes=content-img "image_tooltip")
 
-9. To specify the internal network configurations, start by choosing the IP allocation protocol: static or DHCP (figure 18). The following details are required if static IP is chosen:
+9. To specify the internal network configurations, start by choosing the IP allocation protocol: static (figure 18) or DHCP. The following details are required if static IP is chosen:
 *   IP range
 *   Subnet mask
 *   Gateway
@@ -282,12 +282,10 @@ _Figure 17: Resource Pool and Shared Datastore Selection_
 *   DNS
 *   NTP
 
-    See the Deployment Requirements section for additional details on these requirements. These steps must be repeated for the following components:
-
-
-1. HDM Internal Network (HDM_Internal_Network)
-2. WAN Network (Uplink_WAN_Network)
-3. ESXi Network (ESXi_Network)
+   See the Deployment Requirements section for additional details on these requirements. These steps must be repeated for the following components:
+* HDM Internal Network (HDM_Internal_Network)
+* WAN Network (Uplink_WAN_Network)
+* ESXi Network (ESXi_Network)
 
 
 **Note:**
@@ -359,7 +357,7 @@ _Figure 21: vCenter Cloud Listing_
 4. Select **Add Cloud**. This will open a wizard where you can select the resources needed to deploy the HDM components.
 5. Select the cloud type, then enter the cloud credentials and the cloud DNS. 
 
-    Refer details gathered during deployment planning, as mentioned in "Deployment planning > Prepare Cloud for Deployment" section.
+    Refer the details gathered during deployment planning, as mentioned in "Deployment planning > Prepare Cloud for Deployment" section.
 
 _Figure 22: HDM Cloud Wizard_
 
@@ -372,7 +370,7 @@ _Figure 22: HDM Cloud Wizard_
 
 
 
-6. Select vDC, vApp cloud where HDM components will be deployed and proceed. 
+6. Select vDC, vApp where HDM components will be deployed on cloud and then proceed. 
 
 
 

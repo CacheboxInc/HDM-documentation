@@ -261,7 +261,7 @@ _Figure 15: vCenter On-Premises Cluster Listing_
 _Figure 16: HDM Installation Wizard_
 
 
-![alt_text](images/image42.png?classes=content-img "image_tooltip")
+![alt_text](images/image42_new.png?classes=content-img "image_tooltip")
 
 
 
@@ -274,7 +274,7 @@ _Figure 17: Resource Pool and Shared Datastore Selection_
 
 
 
-9. To specify the internal network configurations, start by choosing the IP allocation protocol: static or DHCP (figure 18). The following details are required if static IP is chosen:
+9. To specify the internal network configurations, start by choosing the IP allocation protocol: static (figure 18) or DHCP. The following details are required if static IP is chosen:
 *   IP range
 *   Subnet mask
 *   Gateway
@@ -282,12 +282,10 @@ _Figure 17: Resource Pool and Shared Datastore Selection_
 *   DNS
 *   NTP
 
-    See the Deployment Requirements section for additional details on these requirements. These steps must be repeated for the following components:
-
-
-1. HDM Internal Network (HDM_Internal_Network)
-2. WAN Network (Uplink_WAN_Network)
-3. ESXi Network (ESXi_Network)
+   See the Deployment Requirements section for additional details on these requirements. These steps must be repeated for the following components:
+* HDM Internal Network (HDM_Internal_Network)
+* WAN Network (Uplink_WAN_Network)
+* ESXi Network (ESXi_Network)
 
 
 **Note:**
