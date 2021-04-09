@@ -11,7 +11,7 @@ order_manual: ''
 HDM provides a flexible deployment model to support a wide range of user needs with respect to use cases, performance, scalability, and security. This section will help you choose the correct deployment type and network topology to support your needs. 
 
 
-![alt_text](images/image42.png?classes=content-img "image_tooltip")
+![alt_text](images/image42_new.png?classes=content-img "image_tooltip")
 
 
 ### HDM Deployment Types 
