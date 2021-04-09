@@ -7,7 +7,7 @@ title: 'Deployment Planning'
 HDM provides a very flexible deployment model providing options to cater to different user needs in terms of use case, performance, scalability and security. This needs to be selected as part of the installation of on-premises components. 
 
 
-![alt_text](images/image42.png?classes=content-img "image_tooltip")
+![alt_text](images/image42_new.png?classes=content-img "image_tooltip")
 
 
 
