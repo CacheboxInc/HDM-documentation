@@ -334,7 +334,7 @@ Pre-requisites
 3. Ensure that the vCenter cloud is reachable from the HDM appliance. If cloud vCD is on the WAN and the WAN is not reachable through the appliance’s default route, then a static entry must be added to the HDM appliance to reach the cloud vCD. This can be accomplished by following these steps:
     1. vim /etc/pio.routes and add the entry
 ```
-        ens256|<cloud_subnet>|<gateway_to_access_cloud>
+        ens256|&lt;cloud_subnet>|&lt;gateway_to_access_cloud>
         Example: ens256|10.3.0.0/24|10.1.0.1`
 ```
     2. /usr/bin/setup/network.sh
