@@ -124,7 +124,7 @@ Pre-requisites
 2. The HDM SPBM policy has been applied to all disks within the VM (For warm migration only)
 3. VM migration with multiple CD/DVD Devices is not supported. If you attempt to migrate such a VM an error will be reported. Please remove and retry migration
 4. Ensure the OS type configured on the vCenter is the same as the actual OS running within the virtual machine. If there is a mismatch, it is very likely; the migration will fail during the commit phase. (Ref: CP-2924)
-5. Migration of VMs with “..” (two dots) as a substring in the name will fail. Please rename before migration to ensure a successful migration. (Ref: CP-6033)
+5. Migration of VMs with “..” (two dots) as a substring is not supported. Please rename before migration to ensure a successful migration. (Ref: CP-6033)
 6. Migrating Windows VMs with an Evaluation License will result in the migrated VM failing the guest OS's license check. The operating system enforces this behavior, and the VM will power off after 45 minutes. This is not an HDM product bug but the license enforcement of Microsoft.
 
 Steps
