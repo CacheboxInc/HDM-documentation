@@ -1,6 +1,6 @@
 # HDM Documentation
 
-http://docs.primaryio.com  
+
 
 |Documentation Type| Git branch| Public URL|
 |--|---|---|
