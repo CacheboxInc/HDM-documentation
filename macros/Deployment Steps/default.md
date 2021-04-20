@@ -4,7 +4,7 @@ title: 'Deployment Steps'
 
 NOTICE_FOR_MACRO_PREPROCESSOR
 
-This section describes how to deploy, configure, and undeploy PrimaryIO Hybrid Cloud Data Management (HDM) 2.2.1 for enabling migrations of virtual machines to PLATFORM_NAME.
+This section describes how to deploy, configure, and undeploy PrimaryIO Hybrid Cloud Data Management (HDM) HDM_VERSION for enabling migrations of virtual machines to PLATFORM_NAME.
 
 
 ## HDM Deployment Steps
