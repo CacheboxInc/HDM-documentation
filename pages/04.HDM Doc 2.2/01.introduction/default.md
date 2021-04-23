@@ -82,9 +82,41 @@ _Figure 2: Location of HDM 2.2.1 components_
 _Figure 3: HDM components_
 ![alt_text](images/image54.png?classes=content-img "image_tooltip")
  
+ # Modifications performed into the Guest VM OS :
+ HDM performs few checks and operations into the guest VM operating system during the ‘Prepare To Migrate’ step. This is a mandatory step and performed before migrating a VM to the cloud. It is applicable to any type of cloud deployment (VMware Cloud Director, Cloud Director service or  VMware Cloud on AWS )
+ 
+ Below operations are performed on each Guest VM that is planned for migration :
+ 
+ **On supported Linux guest VM :**
+1.	Checks if VMware tools are installed and running
+2.	HDM Appliance copies a prepare to migrate tool  in Guest User’s home directory->.PIO->hyc
+3.	Installs iSCSI initiator package if it is not installed
+4.	Adds iSCSI driver/module to initrd
+5.	Installs grub scripts to support, customized Grub entries and to support EFI
+6.	Configures and Updates grub to allow iSCSI booting
+7.	Fetches pre-migration network configuration information and then sets it post migration 
+
+
+**On supported Windows guest VM**
+1.	Checks if VMware tools are installed and running
+2.	HDM Appliance copies prepare to migrate tool in Guest user’s ProgramData->PIO->hyc directory 
+3.	HDM Appliance copies NVSPBIND package in in Guest user’s tmp directory 
+4.	Installs  NVSPBIND package if  it is  not installed 
+5.	Disables WFP(Windows Filtering Platform) Lightweight Filter driver like ms_wfplwf_upper, ms_ndiscap_lower and ms_ndiscap to unblock iSCSI traffic
+6.	Configures ISCSI initiator service by turning on 'msiscsi' service and sets 'service_start_mode' to 'automatic' so that it can be auto started after each boot.
+7.	Schedules a task which makes offline devices online.
+8.	Fetches pre-migration network configuration information and then sets it post migration 
+
+
+
+> **To know in detail about HDM component interactions refer the  [Appendix](http://ec2-34-222-41-154.us-west-2.compute.amazonaws.com/hdm%20doc%202.2/appendix#hdm-component-interactions) section of this document.**
+
+
+ 
 # HDM Deployment
 
 HDM provides a flexible deployment model to support a wide range of user needs regarding use case, performance, scalability, and security. The detailed steps and options for each deployment method are covered in the **Deployment planning** and subsequent sections. 
+
 
 ### Deployment Overview of HDM
 [plugin:youtube](https://youtu.be/BtpGR64wLGQ)
