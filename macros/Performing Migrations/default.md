@@ -318,6 +318,17 @@ Steps
 6. Once the migration back is successful, the VM will be deleted from the cloud vCenter. It will then be moved from the _HDM_MIGRATE_POOL_ to the original resource pool where it resided prior to the migration. At this point, the VM will have to be explicitly powered on.
 
 
+## Generating statistical data of migrated VM’s 
+HDM provides a facility to download the detailed statistcal data in .csv format for migrated VM's. It provides details like migration status, start date & time, end date & time, Network Data Transfer throughput, Read IOPS ..etc
+
+To download the statistical report for migrated VMs:
+
+1. In the on-premises vCenter, select the cluster
+2. On the right-hand panel, select _Monitor_, followed by _HDM_, then _migration_ and then _summary_
+3. As shown in the  figure below (highlighted in red), you can download the statistics in .csv format
+
+![alt_text](images/image48.png?classes=content-img "image_tooltip")
+
 # HDM Monitoring
 
 HDM monitors the VMs in a cluster for I/O and resource usage activity. The following data will be provided:
