@@ -9,6 +9,11 @@ echo > build.log
 
 # Build the deployment section of all types
 
+## Introduction
+echo Building Intro section >> build.log
+echo ============= >> build.log
+m4 -dtfl Introduction/intro.md > ../pages/04.HDM\ Doc\ 2.2/01.introduction/default.md 2>>build.log
+
 ## VCS
 echo VCS Build start >> build.log
 echo ============= >> build.log
