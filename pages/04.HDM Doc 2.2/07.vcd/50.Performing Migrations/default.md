@@ -157,7 +157,8 @@ Steps
 7. If the Warm and Cold Migration type has been selected, map the network for the VM
 
 
-     * Choose the Static IP or DHCP which ever is required.  
+     * Choose DHCP.
+     * Do not choose Static IP, it is not supported in release 2.2.1.
 ![alt_text](images-vcd/image-1.png?classes=content-img "image_tooltip")
 ![alt_text](images-vcd/image-2.png?classes=content-img "image_tooltip")
 
