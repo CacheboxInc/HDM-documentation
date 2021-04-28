@@ -4,32 +4,28 @@ title: 'Appendix'
 
 # Prepare to migrate
 
-The following operations are done on the guest VM for prepare to migrate.
 
-### Linux
-
-For a Support Linux OS we will
-1. Check VMware tools installed and running
-1. Appliance copy prepare to migrate tool to Guest in User’s home directory->.PIO->hyc
-1. Check iSCSI initiator package installed (install it if not)
-1. Add iSCSI driver/module to initrd
-1. Install grub scripts to support customized Grub entries and to support EFI
-1. Configure and Update grub to allow iSCSI booting
-1. Get network configuration pre-migration and then Set post migration network configuration
-
-
-### Windows
+ Below operations are performed on each Guest VM that is planned for migration :
+ 
+ **On supported Linux guest VM :**
+1.	Checks if VMware tools are installed and running
+2.	HDM Appliance copies a prepare to migrate tool  in Guest User’s home directory->.PIO->hyc
+3.	Installs iSCSI initiator package if it is not installed
+4.	Adds iSCSI driver/module to initrd
+5.	Installs grub scripts to support, customized Grub entries and to support EFI
+6.	Configures and Updates grub to allow iSCSI booting
+7.	Fetches pre-migration network configuration information and then sets it post migration 
 
 
-For a Supported Windows OS we will
-1. Check VMware tools installed and running
-1. Appliance copy prepare to migrate tool to Guest in ProgramData->PIO->hyc directory
-1. Appliance copy NVSPBIND package in tmp directory of Guest (if not copied earlier)
-1. Check NVSPBIND package installed (install it if not)
-1. Disable WFP(Windows Filtering Platform) Lightweight Filter driver like ms_wfplwf_upper, ms_ndiscap_lower and ms_ndiscap to unblock iSCSI traffic
-1. Configure ISCSI initiator service by turning on 'msiscsi' service and setting 'service_start_mode' to 'automatic' so it will be going to autostart on each boot.
-1. Schedule a task which makes offline devices online.  
-1. Get network configuration pre-migration and then Set post migration network configuration
+**On supported Windows guest VM**
+1.	Checks if VMware tools are installed and running
+2.	HDM Appliance copies prepare to migrate tool in Guest user’s ProgramData->PIO->hyc directory 
+3.	HDM Appliance copies NVSPBIND package in in Guest user’s tmp directory 
+4.	Installs  NVSPBIND package if  it is  not installed 
+5.	Disables WFP(Windows Filtering Platform) Lightweight Filter driver like ms_wfplwf_upper, ms_ndiscap_lower and ms_ndiscap to unblock iSCSI traffic
+6.	Configures ISCSI initiator service by turning on 'msiscsi' service and sets 'service_start_mode' to 'automatic' so that it can be auto started after each boot.
+7.	Schedules a task which makes offline devices online.
+8.	Fetches pre-migration network configuration information and then sets it post migration
 
 
 # HDM - Component Interactions
