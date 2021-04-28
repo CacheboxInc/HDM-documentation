@@ -29,6 +29,9 @@ In this case all of the “Source Networks” would map to **_VM Network / Manag
 
 ### Network planning spreadsheet
 
+<!--- The original sheet is on google docs at this location
+https://docs.google.com/spreadsheets/d/1W09BCL4f1dRz1lNOwhQx4oT_fXIDsbMaN1LAiNmG4qg/edit#gid=0
+We exported this to xls and uploaded here. -->
 Please download the spreadsheet [Planning Template](../../../../Planning%20Template.xlsx) and use along with
 your deployment process. 
 
