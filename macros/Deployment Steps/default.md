@@ -602,7 +602,7 @@ Prerequisites
 
 Steps
 
-1. In the on-premises vCenter, select _PrimaryIO_ from _Shortcuts_ or from _Menu_ to access the PrimaryIO dashboard
+1. In the on-premises vCenter, select _HDM_ from _Shortcuts_ or from _Menu_ to access the PrimaryIO dashboard
 2. Select **Administration** from the tab.
 3. Select **Configuration** to access the cluster listing.
 4. On the cluster where HDM is installed, select **Enable** under monitoring. This will open a popup.
