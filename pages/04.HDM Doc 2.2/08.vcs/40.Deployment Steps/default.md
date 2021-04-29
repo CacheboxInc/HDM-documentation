@@ -332,15 +332,7 @@ Pre-requisites
 
 
 1. Ensure that the HDM plug-in has been registered on vCenter and the HDM icon is visible on the home screen. 
-2. Ensure that the on-premises deployment has successfully completed.
-3. Ensure that the vCenter cloud is reachable from the HDM appliance. If cloud vCD is on the WAN and the WAN is not reachable through the appliance’s default route, then a static entry must be added to the HDM appliance to reach the cloud vCD. This can be accomplished by following these steps:
-    1. vim /etc/pio.routes and add the entry
-```
-        ens256|<cloud_subnet>|<gateway_to_access_cloud>
-        Example: ens256|10.3.0.0/24|10.1.0.1`
-```
-    2. /usr/bin/setup/network.sh
-
+2. Ensure that the on-premises deployment has completed successfully.
 
 
 
@@ -366,10 +358,6 @@ _Figure 22: HDM Cloud Wizard_
 ![alt_text](images/image1.png?classes=content-img "image_tooltip")
 
 
-
-
-
-![alt_text](images/image21.png?classes=content-img "image_tooltip")
 
 
 

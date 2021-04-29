@@ -390,10 +390,6 @@ ifdef(~sTARGET_VCD~e, ~s
 ![alt_text](images/image17.png?classes=content-img "image_tooltip")
 ~e)
 
-ifdef(~sTARGET_VCS~e, ~s
-![alt_text](images/image21.png?classes=content-img "image_tooltip")
-~e)
-
 ifdef(~sTARGET_VCD~e, ~s
 6. Select vDC, vApp where HDM components will be deployed on cloud and then proceed. 
 ~e)
