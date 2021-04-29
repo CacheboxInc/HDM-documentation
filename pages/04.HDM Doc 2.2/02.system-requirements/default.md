@@ -77,7 +77,15 @@ title: 'System Requirements'
  
 #### OS Support (TBC/Warm Migration)
 
+Cold migration is semantically equivalent to an OVF export/import and is supported for all operating systems.
+
+For warm migration and TBC 
+* VMware Hardware version 7 - 14 is supported.
+* UEFI Secure boot is not supported for any Operating System.
+
 **Windows**
+
+HDM supports the warm migration of the following versions of Windows with an MBR boot loader. The migration of Windows with a UEFI boot loader is not supported. Use cold migration instead.
 
 | Windows Version | Edition |
 |:--------------------|:---------|
@@ -87,9 +95,12 @@ title: 'System Requirements'
 
 **Linux**
 
-|Linux Distributions | Version |
-|:----------------------|:--------|
-| RHEL | 6.9, 6.10, 7.2, 7.3, 7.4, 7.5, 7.6, 8.2 |
-| SLES | 12-SP5, 15-SP2 |
-| CentOS | 7.6 (1810), 7.5 (1804), 7.4 (1708), 8.2 |
-| Ubuntu Server	| 16.04, 18.04, 20.04 |
+
+We support 
+* Red Hat Enterprise Linux
+* CentOS
+* SUSE Linux Enterprise Server
+* Ubuntu Server
+
+For details of the versions qualified and the migration modes which are supported please refer 
+the [appendix](../appendix) for the list of all qualified and supported Operating systems. 
