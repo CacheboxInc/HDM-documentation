@@ -109,7 +109,7 @@ Pre-requisites
 5. Migration of VMs with “..” (two dots) or spaces (" ") as a substring is not supported. Please rename before migration to ensure a successful migration. <!---(Ref: CP-6033) (Ref:CP-6062) -->
 6. Please verify that the MAC ID for the machine is not in use by any VMs already in the cloud. This can happen if you migrate a VM twice or an existing VM with a conflicting ID. <!--- (Ref:- CP-6024) -->
 7. Migrating Windows VMs with an Evaluation License will result in the migrated VM failing the guest OS's license check. The operating system enforces this behavior, and the VM will power off after 45 minutes. This is not an HDM product bug but the license enforcement of Microsoft.
-8. Check for Operating system support against desired migration mode in the table in [appendix](../../../appendix#guest-os-support-matrix).
+8. Check for Operating system support against desired migration mode in the table in [appendix](../../appendix#guest-os-support-matrix).
 
 Steps
 
