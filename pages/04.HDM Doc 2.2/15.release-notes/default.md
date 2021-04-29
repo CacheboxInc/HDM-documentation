@@ -13,7 +13,7 @@ What is new in HDM 2.2.1 Release?
 *   WAN disconnects lasting more than 2 minutes will be recovered.
 
 This release of HDM support limited concurrency on VMware Cloud Director 
-platform. We recommend no more than 2 concurrent VM migrations. 
+platform. We recommend no more than 4 concurrent VM migrations. 
 
 
 
