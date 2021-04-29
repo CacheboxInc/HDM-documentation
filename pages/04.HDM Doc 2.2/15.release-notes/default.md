@@ -12,7 +12,7 @@ What is new in HDM 2.2.1 Release?
 *   Highly efficient, proprietary, data transport for Cold, TBC and Warm migration.
 *   WAN disconnects lasting more than 2 minutes will be recovered.
 
-This release of HDM support limited concurrency on VMware Cloud Director 
+This release of HDM supports limited concurrency on VMware Cloud Director 
 platform. We recommend no more than 4 concurrent VM migrations. 
 
 
