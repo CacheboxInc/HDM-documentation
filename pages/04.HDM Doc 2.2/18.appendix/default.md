@@ -220,6 +220,9 @@ https://tabletomarkdown.com/convert-spreadsheet-to-markdown/ -->
 | Ubuntu Server 20.04             | UEFI      | Qualified     | Qualified     | Qualified     |
 
 Legend:
+
 **Qualified** : Tested and qualified by PrimaryIO.
+
 **Not Qualified** : Supported but pending qualification by PrimaryIO.
+
 **Not Supported** : Does for work for given migration mode.
