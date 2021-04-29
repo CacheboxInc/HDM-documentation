@@ -60,7 +60,7 @@ Before proceeding with the installation, watch the training videos ([https://www
 # Deploy the HDM Appliance
 
 *   Make sure you have at least 10GB of free space to download the appliance
-*   Unzip the file _HDM_2.1.zip_ from the download link
+*   Unzip the product _zip_ file from the download link
 *   Deploy the appliance using the vCenter UI 
 
 
