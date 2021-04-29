@@ -103,4 +103,4 @@ We support
 * Ubuntu Server
 
 For details of the versions qualified and the migration modes which are supported please refer 
-the [appendix](../appendix) for the list of all qualified and supported Operating systems. 
+the [appendix](../appendix#guest-os-support-matrix) for the list of all qualified and supported Operating systems. 
