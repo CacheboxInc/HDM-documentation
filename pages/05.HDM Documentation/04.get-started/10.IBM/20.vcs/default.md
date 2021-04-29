@@ -75,7 +75,7 @@ Estimated time 5 minutes
 ```
 
 *   Make sure you have at least 10GB free space to download the appliance.
-*   Unzip the file HDM_2.1.zip from the download link
+*   Unzip the product _zip_ file from the download link
 *   Deploy the appliance using the vCenter UI 
 
 **Note :**

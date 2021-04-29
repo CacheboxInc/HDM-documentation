@@ -163,3 +163,81 @@ The document describes the interactions between HDM components and VMware Infras
             1. Check VMware tool versions
             1. Check OS version
             1. Check iSCSI initiator configuration. If not installed, installs iSCSI initiator and configures VM boot over iSCSI on cloud
+
+# Guest OS support Matrix
+
+<!--- https://docs.google.com/spreadsheets/d/1TRXV1A0BI4nr8gtKSHzYZJDX2vDz3QkisCWG6Az1zQY/edit#gid=0
+converted using 
+https://tabletomarkdown.com/convert-spreadsheet-to-markdown/ -->
+
+| OS FAMILY | OS                              | Boot Mode   | VCD WARM      | VCS WARM      | Any Cold      | Guest Static IP for VCD Cold | Guest Static IP for VCD Warm |
+| --------- | ------------------------------- | ----------- | ------------- | ------------- | ------------- | ---------------------------- | ---------------------------- |
+| Windows   | Windows Server 2012 R2 (64 bit) | MBR         | qualified     | qualified     | qualified     | Not Supported                | Not Supported                |
+| Windows   | Windows Server 2012 R2 (64 bit) | UEFI        | Not Supported | Not Supported | qualified     | Not Supported                | Not Supported                |
+| Windows   | Windows Server 2012 R2 (64 bit) | UEFI Secure | Not Supported | Not Supported | qualified     | Not Supported                | Not Supported                |
+| Windows   | Windows Server 2016 (64 bit)    | MBR         | qualified     | qualified     | qualified     | Not Supported                | Not Supported                |
+| Windows   | Windows Server 2016 (64 bit)    | UEFI        | Not Supported | Not Supported | qualified     | Not Supported                | Not Supported                |
+| Windows   | Windows Server 2016 (64 bit)    | UEFI Secure | Not Supported | Not Supported | qualified     | Not Supported                | Not Supported                |
+| Windows   | Windows Server 2019 (64 bit)    | MBR         | qualified     | qualified     | qualified     | Not Supported                | Not Supported                |
+| Windows   | Windows Server 2019 (64 bit)    | UEFI        | Not Supported | Not Supported | qualified     | Not Supported                | Not Supported                |
+| Windows   | Windows Server 2019 (64 bit)    | UEFI Secure | Not Supported | Not Supported | qualified     | Not Supported                | Not Supported                |
+| Windows   | Windows 2008 R2                 | MBR         | qualified     | qualified     | qualified     | Not Supported                | Not Supported                |
+| Windows   | Windows 2008 R2                 | UEFI        | Not Supported | Not Supported | Not qualified | Not Supported                | Not Supported                |
+| Windows   | Windows 2008 R2                 | UEFI Secure | Not Supported | Not Supported | not qualified | Not Supported                | Not Supported                |
+| RHEL      | RHEL 6.9                        | MBR         | Not Supported | Not qualified | qualified     | Not Supported                | Not Supported                |
+| RHEL      | RHEL 6.9                        | UEFI        | not qualified | Not qualified | not qualified | Not Supported                | Not Supported                |
+| RHEL      | RHEL 6.9                        | UEFI Secure | Not Supported | Not Supported | not qualified | Not Supported                | Not Supported                |
+| RHEL      | RHEL 6.10                       | MBR         | qualified     | not qualified | qualified     | Not Supported                | Not Supported                |
+| RHEL      | RHEL 6.10                       | UEFI        | not qualified | Not qualified | not qualified | Not Supported                | Not Supported                |
+| RHEL      | RHEL 6.10                       | UEFI Secure | Not Supported | Not Supported | not qualified | Not Supported                | Not Supported                |
+| RHEL      | RHEL 7.2                        | MBR         | qualified     | qualified     | qualified     | Not Supported                | Not Supported                |
+| RHEL      | RHEL 7.2                        | UEFI        | qualified     | not qualified | qualified     | Not Supported                | Not Supported                |
+| RHEL      | RHEL 7.2                        | UEFI Secure | Not Supported | Not Supported | qualified     | Not Supported                | Not Supported                |
+| RHEL      | RHEL 7.3                        | MBR         | qualified     | qualified     | qualified     | Not Supported                | Not Supported                |
+| RHEL      | RHEL 7.3                        | UEFI        | qualified     | qualified     | qualified     | Not Supported                | Not Supported                |
+| RHEL      | RHEL 7.3                        | UEFI Secure | Not Supported | Not Supported | qualified     | Not Supported                | Not Supported                |
+| RHEL      | RHEL 7.4                        | MBR         | qualified     | qualified     | qualified     | Not Supported                | Not Supported                |
+| RHEL      | RHEL 7.4                        | UEFI        | qualified     | qualified     | qualified     | Not Supported                | Not Supported                |
+| RHEL      | RHEL 7.4                        | UEFI Secure | Not Supported | Not Supported | qualified     | Not Supported                | Not Supported                |
+| RHEL      | RHEL 7.5                        | MBR         | qualified     | qualified     | qualified     | Not Supported                | Not Supported                |
+| RHEL      | RHEL 7.5                        | UEFI        | qualified     | not qualified | qualified     | Not Supported                | Not Supported                |
+| RHEL      | RHEL 7.5                        | UEFI Secure | Not Supported | Not Supported | qualified     | Not Supported                | Not Supported                |
+| RHEL      | RHEL 7.6                        | MBR         | qualified     | qualified     | qualified     | Not Supported                | Not Supported                |
+| RHEL      | RHEL 7.6                        | UEFI        | qualified     | not qualified | qualified     | Not Supported                | Not Supported                |
+| RHEL      | RHEL 7.6                        | UEFI Secure | Not Supported | Not Supported | qualified     | Not Supported                | Not Supported                |
+| RHEL      | RHEL 8.2                        | MBR         | qualified     | qualified     | qualified     | Not Supported                | Not Supported                |
+| RHEL      | RHEL 8.2                        | UEFI        | qualified     | qualified     | qualified     | Not Supported                | Not Supported                |
+| RHEL      | RHEL 8.2                        | UEFI Secure | Not Supported | Not Supported | qualified     | Not Supported                | Not Supported                |
+| RHEL      | RHEL 8.3                        | MBR         | qualified     | qualified     | qualified     | Not Supported                | Not Supported                |
+| RHEL      | RHEL 8.3                        | UEFI        | qualified     | qualified     | qualified     | Not Supported                | Not Supported                |
+| RHEL      | RHEL 8.3                        | UEFI Secure | Not Supported | Not Supported | qualified     | Not Supported                | Not Supported                |
+| SLES      | SLES 12-SP5                     | MBR         | qualified     | qualified     | qualified     | Not Supported                | Not Supported                |
+| SLES      | SLES 12-SP5                     | UEFI        | qualified     | Inprogress    | qualified     | Not Supported                | Not Supported                |
+| SLES      | SLES 12-SP5                     | UEFI Secure | Not Supported | Not Supported | qualified     | Not Supported                | Not Supported                |
+| SLES      | SLES 15-SP2                     | MBR         | not qualified | not qualified | qualified     | Not Supported                | Not Supported                |
+| SLES      | SLES 15-SP2                     | UEFI        | qualified     | not qualified | qualified     | Not Supported                | Not Supported                |
+| SLES      | SLES 15-SP2                     | UEFI Secure | Not Supported | Not Supported | qualified     | Not Supported                | Not Supported                |
+| CentOS    | CentOS 7.6(1810)                | MBR         | qualified     | qualified     | qualified     | Not Supported                | Not Supported                |
+| CentOS    | CentOS 7.6(1810)                | UEFI        | qualified     | qualified     | qualified     | Not Supported                | Not Supported                |
+| CentOS    | CentOS 7.6(1810)                | UEFI Secure | Not Supported | Not Supported | qualified     | Not Supported                | Not Supported                |
+| CentOS    | CentOS 7.5(1804)                | MBR         | qualified     | qualified     | qualified     | Not Supported                | Not Supported                |
+| CentOS    | CentOS 7.5(1804)                | UEFI        | not qualified | not qualified | qualified     | Not Supported                | Not Supported                |
+| CentOS    | CentOS 7.5(1804)                | UEFI Secure | Not Supported | Not Supported | qualified     | Not Supported                | Not Supported                |
+| CentOS    | CentOS 7.4(1708)                | MBR         | qualified     | qualified     | qualified     | Not Supported                | Not Supported                |
+| CentOS    | CentOS 7.4(1708)                | UEFI        | not qualified | not qualified | qualified     | Not Supported                | Not Supported                |
+| CentOS    | CentOS 7.4(1708)                | UEFI Secure | Not Supported | Not Supported | qualified     | Not Supported                | Not Supported                |
+| CentOS    | CentOS 8.2                      | MBR         | qualified     | qualified     | qualified     | Not Supported                | Not Supported                |
+| CentOS    | CentOS 8.2                      | UEFI        | qualified     | qualified     | qualified     | Not Supported                | Not Supported                |
+| CentOS    | CentOS 8.2                      | UEFI Secure | Not Supported | Not Supported | qualified     | Not Supported                | Not Supported                |
+| CentOS    | CentOS 8.3                      | MBR         | qualified     | qualified     | qualified     | Not Supported                | Not Supported                |
+| CentOS    | CentOS 8.3                      | UEFI        | qualified     | qualified     | qualified     | Not Supported                | Not Supported                |
+| CentOS    | CentOS 8.3                      | UEFI Secure | Not Supported | Not Supported | not qualified | Not Supported                | Not Supported                |
+| Ubuntu    | Ubuntu Server 16.04             | MBR         | qualified     | qualified     | qualified     | Not Supported                | Not Supported                |
+| Ubuntu    | Ubuntu Server 16.04             | UEFI        | Not Supported | Not Supported | qualified     | Not Supported                | Not Supported                |
+| Ubuntu    | Ubuntu Server 16.04             | UEFI Secure | Not Supported | Not Supported | qualified     | Not Supported                | Not Supported                |
+| Ubuntu    | Ubuntu Server 18.04             | MBR         | qualified     | qualified     | qualified     | Not Supported                | Not Supported                |
+| Ubuntu    | Ubuntu Server 18.04             | UEFI        | qualified     | qualified     | qualified     | Not Supported                | Not Supported                |
+| Ubuntu    | Ubuntu Server 18.04             | UEFI Secure | Not Supported | Not Supported | qualified     | Not Supported                | Not Supported                |
+| Ubuntu    | Ubuntu Server 20.04             | MBR         | qualified     | qualified     | qualified     | Not Supported                | Not Supported                |
+| Ubuntu    | Ubuntu Server 20.04             | UEFI        | qualified     | qualified     | qualified     | Not Supported                | Not Supported                |
+| Ubuntu    | Ubuntu Server 20.04             | UEFI Secure | Not Supported | Not Supported | qualified     | Not Supported                | Not Supported                |

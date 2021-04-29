@@ -121,7 +121,7 @@ Steps
 Pre-requisites
 
 1. _Prepare to Migrate_ has been successful on the VM (For warm migration only)
-2. The HDM SPBM policy has been applied to all disks within the VM (For warm migration only)
+2. The HDM SPBM policy has been applied to all disks within the VM (For warm migration and TBC only)
 3. VM migration with multiple CD/DVD Devices is not supported. If you attempt to migrate such a VM an error will be reported. Please remove and retry migration
 4. Ensure the OS type configured on the vCenter is the same as the actual OS running within the virtual machine. If there is a mismatch, it is very likely; the migration will fail during the commit phase. <!---(Ref: CP-2924)-->
 5. Migration of VMs with “..” (two dots) as a substring is not supported. Please rename before migration to ensure a successful migration. <!---(Ref: CP-6033)-->
@@ -158,7 +158,7 @@ Steps
 
 
      * Choose DHCP.
-     * Do not choose Static IP, it is not supported in release 2.2.1.
+     * Do not choose Static IP or Static Pool, it is not supported in release 2.2.1.
 ![alt_text](images-vcd/image-1.png?classes=content-img "image_tooltip")
 ![alt_text](images-vcd/image-2.png?classes=content-img "image_tooltip")
 
