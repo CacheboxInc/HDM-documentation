@@ -11,5 +11,5 @@ There are two Hands on Labs guides in the enclosed section. Choose the environme
 * IBM Cloud for VMware Solutions Dedicated (VCS)
 
 If you are ready to deploy HDM into your environment, use one of the deployment guides listed below that matches your environment:
-* [IBM Cloud for VMware Solutions Shared (VCD)](/hdm%20documentation/vcd#vmware-cloud-director)
-* [IBM Cloud for VMware Solutions Dedicated (VCS)](/hdm%20documentation/vcs)
+* [IBM Cloud for VMware Solutions Shared (VCD)](/hdm%20doc%202.2/vcd)
+* [IBM Cloud for VMware Solutions Dedicated (VCS)](/hdm%20doc%202.2/vcs)
