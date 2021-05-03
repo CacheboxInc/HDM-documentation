@@ -12,6 +12,8 @@
 
 
 
+
+
 ---
 title: 'Deployment Steps'
 ---
@@ -367,7 +369,7 @@ _Figure 22: HDM Cloud Wizard_
 
 
 
-7. Select the network and IP configuration for ON_CLOUD_HDM_NETWORK (HDM Internal Network) that will be used by HDM for VM boot and subsequent IO handling through the HDM components. Choose the IP allocation protocol: static (figure 24), static pool, or DHCP . If static IP address allocation is chosen, the unused IP addresses or IP ranges, along with the gateway and subnet mask, would need to be specified.
+7. Select the network and IP configuration for ON_CLOUD_HDM_NETWORK (HDM Internal Network) that will be used by HDM for VM boot and subsequent IO handling through the HDM components. Choose the IP allocation protocol: static (figure 24) or DHCP . If static IP address allocation is chosen, the unused IP addresses or IP ranges, along with the gateway and subnet mask, would need to be specified.
 
 _Figure 24: Network Configuration_
 
@@ -377,7 +379,7 @@ _Figure 24: Network Configuration_
 ![alt_text](images/image19_new.png?classes=content-img "image_tooltip")
 
 
-8. Select network IP configurations for the WAN. Choose the IP allocation protocol: static, static pool, or DHCP (figure 25). If static IP address allocation is chosen, the unused IP addresses or IP ranges, along with the gateway and subnet mask, domain search path, and one or more DNS and NTP servers, would need to be specified
+8. Select network IP configurations for the WAN. Choose the IP allocation protocol: static  or DHCP (figure 25). If static IP address allocation is chosen, the unused IP addresses or IP ranges, along with the gateway and subnet mask, domain search path, and one or more DNS and NTP servers, would need to be specified
 
 _Figure 25: WAN Configuration_
 

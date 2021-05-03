@@ -9,3 +9,5 @@ m4_comment(`Keep SQS disabled by default for now, enable if required.')
 undefine(ENABLED_SQS)
 
 define(`HDM_VERSION', `2.2.1')
+
+undefine(STATIC_POOL)
