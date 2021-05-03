@@ -225,4 +225,4 @@ Legend:
 
 **Not Qualified** : Supported but pending qualification by PrimaryIO.
 
-**Not Supported** : Does for work for given migration mode.
+**Not Supported** : Does not work for given migration mode.
