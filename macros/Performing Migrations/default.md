@@ -110,7 +110,7 @@ Pre-requisites
 6. Please verify that the MAC ID for the machine is not in use by any VMs already in the cloud. This can happen if you migrate a VM twice or an existing VM with a conflicting ID. <!--- (Ref:- CP-6024) -->
 7. Migrating Windows VMs with an Evaluation License will result in the migrated VM failing the guest OS's license check. The operating system enforces this behavior, and the VM will power off after 45 minutes. This is not an HDM product bug but the license enforcement of Microsoft.
 8. Check for Operating system support against desired migration mode in the table in [appendix](../../appendix#guest-os-support-matrix).
-9. Ensure that the guest OS type within the application VM and at the source vCenter is same.Inconsistency in this may lead to migration failures. <!---(Ref: DP-2953)-->
+9. Ensure that the guest OS type within the application VM and at the source vCenter is same. Inconsistency in this may lead to migration failures. <!---(Ref: DP-2953)-->
 
 Steps
 
