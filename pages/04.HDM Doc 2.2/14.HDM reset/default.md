@@ -37,6 +37,7 @@ Pre-requisites
 
 
 1. HDM appliance must be powered on.
+2. In case of deployment modes other than Lite and Ultra Lite, for HDM reset to start, administrators will have to restart the praapa IOFilter service on all ESXi of the cluster on on-prem and then reboot the appliance manually.
 
 Steps
 
