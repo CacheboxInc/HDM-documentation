@@ -130,6 +130,7 @@ Pre-requisites
 6. Please verify that the MAC ID for the machine is not in use by any VMs already in the cloud. This can happen if you migrate a VM twice or an existing VM with a conflicting ID. <!--- (Ref:- CP-6024) -->
 7. Migrating Windows VMs with an Evaluation License will result in the migrated VM failing the guest OS's license check. The operating system enforces this behavior, and the VM will power off after 45 minutes. This is not an HDM product bug but the license enforcement of Microsoft.
 8. Check for Operating system support against desired migration mode in the table in [appendix](../../appendix#guest-os-support-matrix).
+9. Ensure that the guest OS type within the application VM and at the source vCenter is same. Inconsistency in this may lead to migration failures. <!---(Ref: DP-2953)-->
 
 Steps
 
@@ -246,6 +247,32 @@ Some important command messages exchanged between the client and HDM are:
 4. **BulkMigrationDoneRequest**: This message is important for migrations initiated using the offline bulk transfer option, because it tells HDM whether or not the offline bulk transfer is complete. 
 
 Details for how these are used for warm and cold migration are provided below.
+
+
+### Steps to Migrate application dependent VMs
+
+1. Create a tag for the application dependent VMs under HDM-APPLICATION-DEPENDENCY category
+as shown below :
+
+![alt_text](images/image50.png?classes=content-img "image_tooltip")
+
+2. Assign this tag to all the VMs which are application dependent.
+
+![alt_text](images/image51.png?classes=content-img "image_tooltip")
+
+![alt_text](images/image52.png?classes=content-img "image_tooltip")
+
+3. In the migration wizard, please make sure to select application dependency check as shown in the following screen :
+
+![alt_text](images/image53.png?classes=content-img "image_tooltip")
+
+4. The application dependency VMs with the same tag will get listed in wizard and get differentiated with different color legends as shown in the following screen :
+
+![alt_text](images/image54.png?classes=content-img "image_tooltip")
+
+5. The application dependent selected VMs can be modified by deselecting application dependency check.
+
+![alt_text](images/image55.png?classes=content-img "image_tooltip")
 
 
 ### Cold Migration
