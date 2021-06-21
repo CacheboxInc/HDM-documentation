@@ -419,6 +419,32 @@ Premigration checks are done before initiating any migration. For warm or TBC mi
 
 If a cdrom drive is not present we will display a warning that a cdrom drive will be added. However if the “prepare-to-migrate” has not been run this warning overrides this check and the migration can proceed. However since the prepare-to-migrate has not been run the migration will eventually fail. (Ref:CP-5713)
 
+ifdef(~sTARGET_VCD~e, ~s
+
+###### **Static warm migration fails for VMs with mutiple NICs on filling same static ip on all the NICs from GUI **
+
+This kind of behaviour will be observed when a VM has multiple network
+adapters (Min 2) connected to the same network. If we have different networks then
+there is no issue.
+Due to this behavior, user is not able to assign separate static IP address to such
+networks as shown in screen below :
+
+![alt_text](images/image8.png?classes=content-img "image_tooltip")
+
+**Workaround**
+1. Assign single IP to all the network adapters which are connected to same network.
+2. Migrate VM to cloud without selecting power on option from migration screen.
+3. On cloud (VCD), we can see that the same IP got assigned to both the network adapters. Here we need to update IPs manually by using Edit option.
+
+![alt_text](images/image9.png?classes=content-img "image_tooltip")
+
+4. Power on the VM.
+
+(Ref : **CP-6120**)
+
+~e)
+
+
 # HDM System Health
 
 
