@@ -427,7 +427,7 @@ If a cdrom drive is not present we will display a warning that a cdrom drive wil
 
 
 
-###### **Static warm migration fails for VMs with mutiple NICs on filling same static ip on all the NICs from GUI **
+###### **Warm migration with static IP address allocation fails if the VM has multiple network adapters (minimum 2) connected to the same network. **
 
 This kind of behaviour will be observed when a VM has multiple network
 adapters (Min 2) connected to the same network. If we have different networks then
