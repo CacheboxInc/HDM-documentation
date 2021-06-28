@@ -37,7 +37,6 @@ Pre-requisites
 
 
 1. HDM appliance must be powered on.
-2. In case of deployment modes other than Lite and Ultra Lite, for HDM reset to start, administrators will have to restart the praapa IOFilter service on all ESXi of the cluster on on-prem and then reboot the appliance manually.
 
 Steps
 
@@ -45,9 +44,11 @@ Steps
 
 1. To access the HDM dashboard, select _HDM_ from _Shortcuts_ or from the Menu in the on-premises vCenter.
 2. Select the _Administration_ tab,** **then _HDM Health_ and** _HDM Reset_** (figure 43). If the _HDM Reset_ button is not enabled, then reboot the HDM appliance and try again.
-3. Select the _HDM RESET_ button to trigger the reset.
-4. You can view the task in the on-premises vCenter (figure 44).
-5. Restart the HDM appliance from vCenter and wait for the restart to complete.
+3. For HDM reset to start, administrators will have to restart the praapa IOFilter service on all ESXi of the cluster on-prem and then reboot the appliance manually. This step is applicable on all resource allocations except Ultra Lite.
+4. SPBM should be removed on VMs or VMs with SPBM should be powered off before the IOFilter restart.
+5. Select the _HDM RESET_ button to trigger the reset.
+6. You can view the task in the on-premises vCenter (figure 44).
+7. Restart the HDM appliance from vCenter and wait for the restart to complete.
 
 _Figure 43: vCenter HDM Reset Tab_
 
