@@ -2,11 +2,11 @@
 title: 'Release Notes'
 ---
 
-The HDM 2.2.1 release has been qualified for production use for _Cold Migration, TBC and Warm Migration Use case_ in the Lite-Standalone,  Lite-Cluster, Standard-Standalone and Standard-Cluster configurations for migration to VMware Cloud Director.
+The HDM 2.2 release has been qualified for production use for _Cold Migration, TBC and Warm Migration Use case_ in the Lite-Standalone,  Lite-Cluster, Standard-Standalone and Standard-Cluster configurations for migration to VMware Cloud Director.
 
-For migrations to VMware Cloud Services or VMware Cloud Foundation HDM 2.2.1 release has been qualified for production use for the _Cold Migration, TBC and Warm Migration Use case_ in the Lite-Standalone,  Lite-Cluster, Standard-Standalone and Standard-Cluster configurations. 
+For migrations to VMware Cloud Services or VMware Cloud Foundation HDM 2.2 release has been qualified for production use for the _Cold Migration, TBC and Warm Migration Use case_ in the Lite-Standalone,  Lite-Cluster, Standard-Standalone and Standard-Cluster configurations. 
 
-What is new in HDM 2.2.1 Release?
+What is new in HDM 2.2 Release?
 
 *   Provides support for Cold, TBC and Warm Migration to VMware Cloud Director.
 *   Highly efficient, proprietary, data transport for Cold, TBC and Warm migration.

@@ -2,7 +2,7 @@
 title: 'Copyright Notice'
 ---
 
-Version: 2.2.1
+Version: 2.2
 Publish Date: August, 2020
 Copyright © 2012-2021 PrimaryIO, Inc.
 PrimaryIO, Inc.
