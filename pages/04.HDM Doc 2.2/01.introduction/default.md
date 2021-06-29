@@ -80,6 +80,7 @@ This use case provides a quick way to migrate VMs to the cloud while retaining t
 3. **On-premises Storage Gateway:** Provides access across the WAN link to deliver traffic optimization and redundancy against failures. It also accesses and manages the on-premises VMDKs for cloud-based VMs.
 4. **Cloud Storage Gateway: **Provides access across the WAN link to enable cloud-based VMs read/write access back to the on-premises environment. It is possible to have multiple gateways for redundancy.
 5. **Sync Daemon:** Located in both environments to deliver compression, encryption, and de-duplication for data being transferred from on-premises to cloud environments. It also provides a mechanism to pause and resume data transfers in the event of a WAN disconnect.
+6. **Cloud Cache:** The cloud cache is a fast, reliable, persistent cache for the VMs in the cloud. The cache maintains the working set of VMs, enabling them to run efficiently without moving entire data sets into the cloud. When there is a cache miss, the storage gateway obtains blocks from the on-premises VMDK.
 
 _Figure 2: Location of HDM 2.2.1 components_
 
