@@ -3,7 +3,7 @@ title: 'Copyright Notice'
 ---
 
 Version: 2.2
-Publish Date: August, 2020
+Publish Date: June, 2021
 Copyright © 2012-2021 PrimaryIO, Inc.
 PrimaryIO, Inc.
 300 3rd St, Los Altos
