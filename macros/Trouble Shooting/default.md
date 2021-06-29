@@ -35,18 +35,13 @@ CP-5107: On HDM_Cloud_Cache reboot, the cache service does not come up. An [HDM 
 
 CP-5112: If the on-premises VM remains powered on following a cold or warm migration, any virtual machine configured to sync data via a static IP address will cause an IP address collision upon power-on. As a result, the migrated VM will be unable to employ the newly-configured static IP address. This is mainly seen in the SLES Linux distribution where IP address collisions are detected as part of the “network startup” scripts, and IP addresses fail to come online. However, regardless of the specific Linux or Windows distribution, any time two VMs are assigned the same IP address, only one will be reachable through that IP address. To avoid this issue, only keep one VM (either the migrated or the original on-premises) powered on at any given time.
 
+DP-2957: Commit operation fails for Linux VMs. This is because the connection between PIO Manager and HA Manager had failed.
+
 **Inconsistent data in HDM plugin UI:**
 
 CP-5003: In the migration pop-up, the amount of data transferred and the compression ratio are shown as zero, even though both are running in the background and progress can be seen in the HDM migration task.
 
 CP-5064: Historical IO analysis data is shown for powered-off virtual machines. The viewed timelines are not consistent with the historical timelines.
-
-CP-5119: HDM supports two ARM parallel syncs per HDM cloud cache. If more ARM sync requests are submitted, the following error message will appear in the ARM sync pop-up:
-```
-"Error: PM-523: Failed to post data for sync. Please try again after sometime. 
-{'msg': 'Failed to submit Sync operation for VM.', 'status': -1, 
-  'vm_uuid': 	'192.168.5.228_vm-1040', 'resp': &lt;Response [429]>}"
-```
 
 # HDM Deployment
 
