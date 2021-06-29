@@ -11,6 +11,7 @@ What is new in HDM 2.2.1 Release?
 *   Provides support for Cold, TBC and Warm Migration to VMware Cloud Director.
 *   Highly efficient, proprietary, data transport for Cold, TBC and Warm migration.
 *   WAN disconnects lasting more than 2 minutes will be recovered.
+*   Static IP support is provided during migration on VC-VCD.
 
 This release of HDM supports limited concurrency on VMware Cloud Director 
 platform. We recommend no more than 4 concurrent VM migrations. 
