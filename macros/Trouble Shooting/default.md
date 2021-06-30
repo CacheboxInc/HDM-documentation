@@ -415,6 +415,28 @@ If a cdrom drive is not present we will display a warning that a cdrom drive wil
 
 ifdef(~sTARGET_VCD~e, ~s
 
+###### **Warm migration with static IP address allocation fails if the VM has multiple network adapters (minimum 2) connected to the same network. **
+
+This kind of behaviour will be observed when a VM has multiple network
+adapters (Min 2) connected to the same network. If we have different networks then
+there is no issue.
+Due to this behavior, user is not able to assign separate static IP address to such
+networks as shown in screen below :
+
+![alt_text](images/image8.png?classes=content-img "image_tooltip")
+
+**Workaround**
+1. Assign single IP to all the network adapters which are connected to same network.
+2. Migrate VM to cloud without selecting power on option from migration screen.
+3. On cloud (VCD), we can see that the same IP got assigned to both the network adapters. Here we need to update IPs manually by using Edit option.
+
+![alt_text](images/image9.png?classes=content-img "image_tooltip")
+
+4. Power on the VM.
+
+(Ref : **CP-6120**)
+
+
 ###### **Post Warm Migration Ubuntu18.04 EFI VM fails to boot on-cloud, in case of Static IP deployment.**
 
 In case of an Ubuntu 18.04 VM, which is deployed in Static mode, it may fail to boot on-cloud post migration. The reason being the Guest OS customization on the VCD environment is not working as expected. This is because Guest OS customization for network configuration is not getting applied inside the Guest OS.
