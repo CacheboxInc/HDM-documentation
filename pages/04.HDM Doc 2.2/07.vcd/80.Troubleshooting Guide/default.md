@@ -425,6 +425,20 @@ Premigration checks are done before initiating any migration. For warm or TBC mi
 
 If a cdrom drive is not present we will display a warning that a cdrom drive will be added. However if the “prepare-to-migrate” has not been run this warning overrides this check and the migration can proceed. However since the prepare-to-migrate has not been run the migration will eventually fail. (Ref:CP-5713)
 
+
+
+
+###### **Post Warm Migration Ubuntu18.04 EFI VM fails to boot on-cloud, in case of Static IP deployment.**
+
+In case of an Ubuntu 18.04 VM, which is deployed in Static mode, it may fail to boot on-cloud post migration. The reason being the Guest OS customization on the VCD environment is not working as expected. This is because Guest OS customization for network configuration is not getting applied inside the Guest OS.
+
+Manual intervention is needed in the current release to configure the
+missing network files inside Guest OS and to allow booting of VM on-cloud.
+Also HDM DHCP mode of deployment can be used instead of Static as a workaround for this problem. (Ref:CP-5956)
+
+
+
+
 # HDM System Health
 
 
