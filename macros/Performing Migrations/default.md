@@ -145,8 +145,8 @@ ifdef(~sTARGET_VCS~e, ~s
 ![alt_text](images/image39.png?classes=content-img "image_tooltip")
 ~e)
 ifdef(~sTARGET_VCD~e, ~s
-     * Choose DHCP.
-     * Do not choose Static IP or Static Pool, it is not supported in release HDM_VERSION.
+     * Choose DHCP or Static.
+     * Do not choose Static Pool, it is not supported in release HDM_VERSION.
 ![alt_text](images-vcd/image-1.png?classes=content-img "image_tooltip")
 ![alt_text](images-vcd/image-2.png?classes=content-img "image_tooltip")
 ~e)

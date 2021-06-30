@@ -160,9 +160,9 @@ Steps
 
 7. If the Warm and Cold Migration type has been selected, map the network for the VM
 
+     * Choose DHCP or Static.
+     * Do not choose Static Pool, it is not supported in release 2.2.1.
 
-     * Choose DHCP.
-     * Do not choose Static IP or Static Pool, it is not supported in release 2.2.
 ![alt_text](images-vcd/image-1.png?classes=content-img "image_tooltip")
 ![alt_text](images-vcd/image-2.png?classes=content-img "image_tooltip")
 
