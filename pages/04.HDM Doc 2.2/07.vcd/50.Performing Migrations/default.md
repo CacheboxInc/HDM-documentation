@@ -131,6 +131,7 @@ Pre-requisites
 7. Migrating Windows VMs with an Evaluation License will result in the migrated VM failing the guest OS's license check. The operating system enforces this behavior, and the VM will power off after 45 minutes. This is not an HDM product bug but the license enforcement of Microsoft.
 8. Check for Operating system support against desired migration mode in the table in [appendix](../../appendix#guest-os-support-matrix).
 9. Ensure that the guest OS type within the application VM and at the source vCenter is same. Inconsistency in this may lead to migration failures. <!---(Ref: DP-2953)-->
+10. Migration of VMs with multiple NICs and mix mode of IP allocation (DHCP and Static) during migration is not supported. <!---(Ref: CP-6119)-->
 
 Steps
 
