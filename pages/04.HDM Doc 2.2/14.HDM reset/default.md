@@ -42,11 +42,15 @@ Steps
 
 
 
+**Note : Ignore step 5 and 6 in case of Ultra Lite deployment.**
+
 1. To access the HDM dashboard, select _HDM_ from _Shortcuts_ or from the Menu in the on-premises vCenter.
-2. Select the _Administration_ tab,** **then _HDM Health_ and** _HDM Reset_** (figure 43). If the _HDM Reset_ button is not enabled, then reboot the HDM appliance and try again.
+2. Select the _Administration_ tab,** **then _HDM Health_ and** _HDM Reset_** (Figure 43). If the _HDM Reset_ button is not enabled, then reboot the HDM appliance and try again.
 3. Select the _HDM RESET_ button to trigger the reset.
-4. You can view the task in the on-premises vCenter (figure 44).
-5. Restart the HDM appliance from vCenter and wait for the restart to complete.
+4. You can view the task in the on-premises vCenter (Figure 44).
+5. SPBM should be removed or VMs with SPBM should be powered off.
+6. Restart the praapa IOFilter service from all ESXis under on-premise cluster.
+7. Restart the HDM appliance from vCenter and wait for the restart to complete.
 
 _Figure 43: vCenter HDM Reset Tab_
 
