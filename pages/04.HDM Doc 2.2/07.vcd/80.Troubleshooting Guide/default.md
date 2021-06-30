@@ -23,7 +23,7 @@ Dont edit this file directly but make changes in
 to the source document in macros/ 
 -->
 
-This section covers troubleshooting for known issues in HDM 2.2.1. In the event there are issues that are not covered in this document or are not easily resolved, contact PrimaryIO support for assistance. 
+This section covers troubleshooting for known issues in HDM 2.2. In the event there are issues that are not covered in this document or are not easily resolved, contact PrimaryIO support for assistance. 
 
 ## Known Issues
 

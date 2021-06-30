@@ -24,7 +24,7 @@ Dont edit this file directly but make changes in
 to the source document in macros/ 
 -->
 
-This section describes how to deploy, configure, and undeploy PrimaryIO Hybrid Cloud Data Management (HDM) 2.2.1 for enabling migrations of virtual machines to IBM Cloud for VMware Solutions Shared (VCD).
+This section describes how to deploy, configure, and undeploy PrimaryIO Hybrid Cloud Data Management (HDM) 2.2 for enabling migrations of virtual machines to IBM Cloud for VMware Solutions Shared (VCD).
 
 
 ## HDM Deployment Steps
