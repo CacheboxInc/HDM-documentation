@@ -49,7 +49,7 @@ Steps
 3. Select the _HDM RESET_ button to trigger the reset.
 4. You can view the task in the on-premises vCenter (Figure 44).
 5. SPBM should be removed or VMs with SPBM should be powered off.
-6. Restart the praapa IOFilter service from all ESXi’s under on-premise cluster.
+6. Restart the praapa IOFilter service from all ESXis under on-premise cluster.
 7. Restart the HDM appliance from vCenter and wait for the restart to complete.
 
 _Figure 43: vCenter HDM Reset Tab_
