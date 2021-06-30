@@ -334,6 +334,32 @@ Steps
 6. Once the migration back is successful, the VM will be deleted from the cloud vCenter. It will then be moved from the _HDM_MIGRATE_POOL_ to the original resource pool where it resided prior to the migration. At this point, the VM will have to be explicitly powered on.
 
 
+### Steps to Migrate application dependent VMs
+
+1. Create a tag for the application dependent VMs under HDM-APPLICATION-DEPENDENCY category
+as shown below:
+
+![alt_text](images/image50.png?classes=content-img "image_tooltip")
+
+2. Assign this tag to all the VMs which are application dependent:
+
+![alt_text](images/image51.png?classes=content-img "image_tooltip")
+
+![alt_text](images/image52.png?classes=content-img "image_tooltip")
+
+3. In the migration wizard, please make sure to select application dependency check as shown in the following screen:
+
+![alt_text](images/image53.png?classes=content-img "image_tooltip")
+
+4. The application dependency VMs with the same tag will get listed in wizard and get differentiated with different color legends as shown in the following screen:
+
+![alt_text](images/image54.png?classes=content-img "image_tooltip")
+
+5. The application dependent selected VMs can be modified by deselecting application dependency check:
+
+![alt_text](images/image55.png?classes=content-img "image_tooltip")
+
+
 ## Generating statistical data of migrated VM’s 
 HDM provides a facility to download the detailed statistcal data in .csv format for migrated VM's. It provides details like migration status, start date & time, end date & time, Network Data Transfer throughput, Read IOPS ..etc
 
