@@ -188,11 +188,8 @@ https://tabletomarkdown.com/convert-spreadsheet-to-markdown/ -->
 | RHEL          | RHEL 6.9                        | MBR         | Not Supported          | Not Supported          | Qualified           | Qualified                    | Not Supported                |
 | RHEL          | RHEL 6.9                        | UEFI        | Not Supported          | Not Supported          | Not Supported       | Not Supported                | Not Supported                |
 | RHEL          | RHEL 6.9                        | UEFI Secure | Not Supported          | Not Supported          | Not Supported       | Not Supported                | Not Supported                |
-| RHEL          | RHEL 6.10                       | MBR         | Qualified              | Not qualified          | Qualified           | Qualified                    | Qualified                    |
-| RHEL          | RHEL 6.10                       | UEFI        | Not Supported          | Not Supported          | Not Supported       | Not Supported                | Not Supported                |
-| RHEL          | RHEL 6.10                       | UEFI Secure | Not Supported          | Not Supported          | Not Supported       | Not Supported                | Not Supported                |
-| RHEL          | RHEL 7.2                        | MBR         | Qualified              | Qualified              | Qualified           | Qualified                    | Qualified                    |
-| RHEL          | RHEL 7.2                        | UEFI        | Qualified              | Not qualified          | Qualified           | Qualified                    | Qualified                    |
+| RHEL          | RHEL 6.10                       | MBR         | Qualified              | Qualified              | Qualified           | Qualified                    | Qualified                    |
+| RHEL          | RHEL 7.2                        | UEFI        | Qualified              | Qualified              | Qualified           | Qualified                    | Qualified                    |
 | RHEL          | RHEL 7.2                        | UEFI Secure | Not Supported          | Not Supported          | Qualified           | Qualified (Need SI handling) | Not Supported                |
 | RHEL          | RHEL 7.3                        | MBR         | Qualified              | Qualified              | Qualified           | Qualified                    | Qualified                    |
 | RHEL          | RHEL 7.3                        | UEFI        | Qualified              | Qualified              | Qualified           | Qualified                    | Qualified                    |
@@ -201,10 +198,10 @@ https://tabletomarkdown.com/convert-spreadsheet-to-markdown/ -->
 | RHEL          | RHEL 7.4                        | UEFI        | Qualified              | Qualified              | Qualified           | Qualified                    | Qualified                    |
 | RHEL          | RHEL 7.4                        | UEFI Secure | Not Supported          | Not Supported          | Qualified           | Qualified                    | Not Supported                |
 | RHEL          | RHEL 7.5                        | MBR         | Qualified              | Qualified              | Qualified           | Qualified                    | Qualified                    |
-| RHEL          | RHEL 7.5                        | UEFI        | Qualified              | Not qualified          | Qualified           | Qualified                    | Qualified                    |
+| RHEL          | RHEL 7.5                        | UEFI        | Qualified              | Qualified              | Qualified           | Qualified                    | Qualified                    |
 | RHEL          | RHEL 7.5                        | UEFI Secure | Not Supported          | Not Supported          | Qualified           | Qualified                    | Not Supported                |
 | RHEL          | RHEL 7.6                        | MBR         | Qualified              | Qualified              | Qualified           | Qualified                    | Qualified                    |
-| RHEL          | RHEL 7.6                        | UEFI        | Qualified              | Not qualified          | Qualified           | Qualified                    | Qualified                    |
+| RHEL          | RHEL 7.6                        | UEFI        | Qualified              | Qualified              | Qualified           | Qualified                    | Qualified                    |
 | RHEL          | RHEL 7.6                        | UEFI Secure | Not Supported          | Not Supported          | Qualified           | Qualified                    | Not Supported                |
 | RHEL          | RHEL 8.2                        | MBR         | Qualified              | Qualified              | Qualified           | Qualified                    | Qualified                    |
 | RHEL          | RHEL 8.2                        | UEFI        | Qualified              | Qualified              | Qualified           | Qualified                    | Qualified                    |
@@ -213,20 +210,20 @@ https://tabletomarkdown.com/convert-spreadsheet-to-markdown/ -->
 | RHEL          | RHEL 8.3                        | UEFI        | Qualified              | Qualified              | Qualified           | Qualified                    | Qualified                    |
 | RHEL          | RHEL 8.3                        | UEFI Secure | Not Supported          | Not Supported          | Qualified           | Qualified                    | Not Supported                |
 | SLES          | SLES 12-SP5                     | MBR         | Qualified              | Qualified              | Qualified           | Qualified                    | Qualified                    |
-| SLES          | SLES 12-SP5                     | UEFI        | Qualified              | Not qualified          | Qualified           | Qualified                    | Qualified                    |
+| SLES          | SLES 12-SP5                     | UEFI        | Qualified              | Not Qualified(DP-2953) | Qualified           | Qualified                    | Qualified                    |
 | SLES          | SLES 12-SP5                     | UEFI Secure | Not Supported          | Not Supported          | Qualified           | Qualified                    | Not Supported                |
-| SLES          | SLES 15-SP2                     | MBR         | Qualified              | Not qualified<br>      | Qualified           | Qualified                    | Qualified                    |
-| SLES          | SLES 15-SP2                     | UEFI        | Qualified              | Not qualified          | Qualified           | Qualified                    | Qualified                    |
+| SLES          | SLES 15-SP2                     | MBR         | Qualified              | Qualified              | Qualified           | Qualified                    | Qualified                    |
+| SLES          | SLES 15-SP2                     | UEFI        | Qualified              | Qualified              | Qualified           | Qualified                    | Qualified                    |
 | SLES          | SLES 15-SP2                     | UEFI Secure | Not Supported          | Not Supported          | Qualified           | Qualified                    | Not Supported                |
 | CentOS        | CentOS 7.6(1810)                | MBR         | Qualified              | Qualified              | Qualified           | Qualified                    | Qualified                    |
 | CentOS        | CentOS 7.6(1810)                | UEFI        | Qualified              | Qualified              | Qualified           | Qualified                    | Qualified                    |
 | CentOS        | CentOS 7.6(1810)                | UEFI Secure | Not Supported          | Not Supported          | Qualified           | Qualified                    | Not Supported                |
 | CentOS        | CentOS 7.5(1804)                | MBR         | Qualified              | Qualified              | Qualified           | Qualified                    | Qualified                    |
-| CentOS        | CentOS 7.5(1804)                | UEFI        | Qualified              | Not qualified          | Qualified           | Qualified                    | Qualified                    |
-| CentOS        | CentOS 7.5(1804)                | UEFI Secure | Not Supported          | Not Supported          | Qualified           | not qualified(CP-6125)       | Not Supported                |
+| CentOS        | CentOS 7.5(1804)                | UEFI        | Qualified              | Qualified              | Qualified           | Qualified                    | Qualified                    |
+| CentOS        | CentOS 7.5(1804)                | UEFI Secure | Not Supported          | Not Supported          | Qualified           | Not Qualified(CP-6125)       | Not Supported                |
 | CentOS        | CentOS 7.4(1708)                | MBR         | Qualified              | Qualified              | Qualified           | Qualified                    | Qualified                    |
-| CentOS        | CentOS 7.4(1708)                | UEFI        | Qualified              | Not qualified          | Qualified           | Qualified                    | Qualified                    |
-| CentOS        | CentOS 7.4(1708)                | UEFI Secure | Not Supported          | Not Supported          | Qualified           | not qualified(CP-6125)       | Not Supported                |
+| CentOS        | CentOS 7.4(1708)                | UEFI        | Qualified              | Qualified              | Qualified           | Qualified                    | Qualified                    |
+| CentOS        | CentOS 7.4(1708)                | UEFI Secure | Not Supported          | Not Supported          | Qualified           | Not Qualified(CP-6125)       | Not Supported                |
 | CentOS        | CentOS 8.2                      | MBR         | Qualified              | Qualified              | Qualified           | Qualified                    | Qualified                    |
 | CentOS        | CentOS 8.2                      | UEFI        | Qualified              | Qualified              | Qualified           | Qualified                    | Qualified                    |
 | CentOS        | CentOS 8.2                      | UEFI Secure | Not Supported          | Not Supported          | Qualified           | Qualified                    | Not Supported                |
@@ -235,14 +232,14 @@ https://tabletomarkdown.com/convert-spreadsheet-to-markdown/ -->
 | CentOS        | CentOS 8.3                      | UEFI Secure | Not Supported          | Not Supported          | Qualified           | Qualified                    | Not Supported                |
 | Ubuntu        | Ubuntu Server 16.04             | MBR         | Qualified              | Qualified              | Qualified           | Qualified                    | Qualified                    |
 | Ubuntu        | Ubuntu Server 16.04             | UEFI        | Not Supported          | Not Supported          | Qualified           | Qualified                    | Not Supported                |
-| Ubuntu        | Ubuntu Server 16.04             | UEFI Secure | Not Supported          | Not Supported          | Qualified           | not qualified(CP-6117)       | Not Supported                |
+| Ubuntu        | Ubuntu Server 16.04             | UEFI Secure | Not Supported          | Not Supported          | Qualified           | Not Qualified(CP-6117)       | Not Supported                |
 | Ubuntu        | Ubuntu Server 18.04             | MBR         | Qualified              | Qualified              | Qualified           | Qualified                    | Qualified                    |
-| Ubuntu        | Ubuntu Server 18.04             | UEFI        | not qualified(CP-5956) | Qualified              | Qualified           | Qualified                    | not qualified(CP-5956)       |
+| Ubuntu        | Ubuntu Server 18.04             | UEFI        | Not Qualified(CP-5956) | Qualified              | Qualified           | Qualified                    | Not Qualified(CP-5956)       |
 | Ubuntu        | Ubuntu Server 18.04             | UEFI Secure | Not Supported          | Not Supported          | Qualified           | Qualified                    | Not Supported                |
 | Ubuntu        | Ubuntu Server 20.04             | MBR         | Qualified              | Qualified              | Qualified           | Qualified (Need SI handling) | Qualified                    |
 | Ubuntu        | Ubuntu Server 20.04             | UEFI        | Qualified              | Qualified              | Qualified           | Qualified (Need SI handling) | Qualified                    |
 | Ubuntu        | Ubuntu Server 20.04             | UEFI Secure | Not Supported          | Not Supported          | Qualified           | Qualified (Need SI handling) | Not Supported                |
-| Oracle\_Linux | Oracle\_Linux 6.8               | MBR         | not qualified(DP-2962) | not qualified(DP-2962) | Qualified           | Qualified                    | not qualified(DP-2962)       |
+| Oracle\_Linux | Oracle\_Linux 6.8               | MBR         | Not Qualified(DP-2962) | Not Qualified(DP-2962) | Qualified           | Qualified                    | Not Qualified(DP-2962)       |
 | Oracle\_Linux | Oracle\_Linux 6.8               | UEFI        | Not Supported          | Not Supported          | Qualified           | Qualified                    | Not Supported                |
 | Oracle\_Linux | Oracle\_Linux 6.8               | UEFI Secure | Not Supported          | Not Supported          | Not Supported       | Not Supported                | Not Supported                |
 | Oracle\_Linux | Oracle\_Linux 7.7               | MBR         | Qualified              | Qualified              | Qualified           | Qualified                    | Qualified                    |
@@ -251,13 +248,13 @@ https://tabletomarkdown.com/convert-spreadsheet-to-markdown/ -->
 | Oracle\_Linux | Oracle\_Linux 8.3               | MBR         | Qualified              | Qualified              | Qualified           | Qualified (Need SI handling) | Qualified                    |
 | Oracle\_Linux | Oracle\_Linux 8.3               | UEFI        | Not Supported          | Not Supported          | Not Supported       | Not Supported                | Not Supported                |
 | Oracle\_Linux | Oracle\_Linux 8.3               | UEFI Secure | Not Supported          | Not Supported          | Not Supported       | Not Supported                | Not Supported                |
-| Photon os     | 4                               | UEFI        | Not Supported          | Not Supported          | Qualified           | Qualified                    | Not Supported                |
-| Photon os     | 4                               | UEFI Secure | Not Supported          | Not Supported          | Qualified (No GOSC) | Qualified (No GOSC)          | Not Supported                |
-| Photon os     | 3                               | UEFI        | Not Supported          | Not Supported          | Qualified           | Qualified                    | Not Supported                |
-| Photon os     | 3                               | UEFI Secure | Not Supported          | Not Supported          | Qualified (No GOSC) | Qualified (No GOSC)          | Not Supported                |
-| Photon os     | 2                               | MBR         | Not Supported          | Not Supported          | Qualified           | Qualified                    | Not Supported                |
-| Photon os     | 2                               | UEFI        | Not Supported          | Not Supported          | Qualified (No GOSC) | Qualified (No GOSC)          | Not Supported                |
-| Photon os     | 2                               | UEFI Secure | Not Supported          | Not Supported          | Qualified           | Qualified                    | Not Supported                |
+| Photon OS     | 4                               | UEFI        | Not Supported          | Not Supported          | Qualified           | Qualified                    | Not Supported                |
+| Photon OS     | 4                               | UEFI Secure | Not Supported          | Not Supported          | Qualified (No GOSC) | Qualified (No GOSC)          | Not Supported                |
+| Photon OS     | 3                               | UEFI        | Not Supported          | Not Supported          | Qualified           | Qualified                    | Not Supported                |
+| Photon OS     | 3                               | UEFI Secure | Not Supported          | Not Supported          | Qualified (No GOSC) | Qualified (No GOSC)          | Not Supported                |
+| Photon OS     | 2                               | MBR         | Not Supported          | Not Supported          | Qualified           | Qualified                    | Not Supported                |
+| Photon OS     | 2                               | UEFI        | Not Supported          | Not Supported          | Qualified (No GOSC) | Qualified (No GOSC)          | Not Supported                |
+| Photon OS     | 2                               | UEFI Secure | Not Supported          | Not Supported          | Qualified           | Qualified                    | Not Supported                |
 
 
 Legend:
