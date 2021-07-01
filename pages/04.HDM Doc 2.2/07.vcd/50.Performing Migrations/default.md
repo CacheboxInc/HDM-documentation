@@ -126,11 +126,12 @@ Pre-requisites
 2. The HDM SPBM policy has been applied to all disks within the VM (For warm migration and TBC only)
 3. VM migration with multiple CD/DVD Devices is not supported. If you attempt to migrate such a VM an error will be reported. Please remove and retry migration
 4. Ensure the OS type configured on the vCenter is the same as the actual OS running within the virtual machine. If there is a mismatch, it is very likely; the migration will fail during the commit phase. <!---(Ref: CP-2924)-->
-5. Migration of VMs with “..” (two dots) or spaces (" ") as a substring is not supported. Please rename before migration to ensure a successful migration. <!---(Ref: CP-6033) (Ref:CP-6062) -->
+5. Migration of VMs with “..” (two dots) as a substring is not supported. Please rename before migration to ensure a successful migration. <!---(Ref: CP-6033)-->
 6. Please verify that the MAC ID for the machine is not in use by any VMs already in the cloud. This can happen if you migrate a VM twice or an existing VM with a conflicting ID. <!--- (Ref:- CP-6024) -->
 7. Migrating Windows VMs with an Evaluation License will result in the migrated VM failing the guest OS's license check. The operating system enforces this behavior, and the VM will power off after 45 minutes. This is not an HDM product bug but the license enforcement of Microsoft.
 8. Check for Operating system support against desired migration mode in the table in [appendix](../../appendix#guest-os-support-matrix).
 9. Ensure that the guest OS type within the application VM and at the source vCenter is same. Inconsistency in this may lead to migration failures. <!---(Ref: DP-2953)-->
+10. Migration of VMs with multiple NICs and mix mode of IP allocation (DHCP and Static) during migration is not supported. <!---(Ref: CP-6119)-->
 
 Steps
 
@@ -160,9 +161,9 @@ Steps
 
 7. If the Warm and Cold Migration type has been selected, map the network for the VM
 
+     * Choose DHCP or Static.
+     * Do not choose Static Pool, it is not supported in release 2.2.
 
-     * Choose DHCP.
-     * Do not choose Static IP or Static Pool, it is not supported in release 2.2.
 ![alt_text](images-vcd/image-1.png?classes=content-img "image_tooltip")
 ![alt_text](images-vcd/image-2.png?classes=content-img "image_tooltip")
 
@@ -335,6 +336,32 @@ Steps
 ![alt_text](images/image26.png?classes=content-img "image_tooltip")
 
 6. Once the migration back is successful, the VM will be deleted from the cloud vCenter. It will then be moved from the _HDM_MIGRATE_POOL_ to the original resource pool where it resided prior to the migration. At this point, the VM will have to be explicitly powered on.
+
+
+### Steps to Migrate application dependent VMs
+
+1. Create a tag for the application dependent VMs under HDM-APPLICATION-DEPENDENCY category
+as shown below:
+
+![alt_text](images/image50.png?classes=content-img "image_tooltip")
+
+2. Assign this tag to all the VMs which are application dependent:
+
+![alt_text](images/image51.png?classes=content-img "image_tooltip")
+
+![alt_text](images/image52.png?classes=content-img "image_tooltip")
+
+3. In the migration wizard, please make sure to select application dependency check as shown in the following screen:
+
+![alt_text](images/image53.png?classes=content-img "image_tooltip")
+
+4. The application dependency VMs with the same tag will get listed in wizard and get differentiated with different color legends as shown in the following screen:
+
+![alt_text](images/image54.png?classes=content-img "image_tooltip")
+
+5. The application dependent selected VMs can be modified by deselecting application dependency check:
+
+![alt_text](images/image55.png?classes=content-img "image_tooltip")
 
 
 ## Generating statistical data of migrated VM’s 
