@@ -132,7 +132,7 @@ VMware HA should be enabled on the cluster where the HDM appliance has been depl
 
 ### Step 2 : Add On-Premises vCenter to the HDM Appliance
 
-**Note**: The on-premises vCenter should be added should to the same location where the HDM appliance has been deployed. 
+**Note**: The on-premises vCenter should be added to the same location where the HDM appliance has been deployed. 
 
 Steps:
 
