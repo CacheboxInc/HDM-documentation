@@ -86,11 +86,11 @@ Pre-requisites
 Steps
 
 1. In the on-premises vCenter, right click on the VM to be migrated.
-2. Select the **HDM -> Prepare to Migrate** option
+2. Select the **HDM -> Prepare to Migrate** option.
 
-![alt_text](images/image30.png?classes=content-img "image_tooltip")
+![alt_text](images/image56.png?classes=content-img "image_tooltip")
 
-3. Specify the administrator/root user credentials in the pop-up wizard 
+3. Specify the administrator/root user credentials in the pop-up wizard.
 
 ![alt_text](images/image33.png?classes=content-img "image_tooltip")
 
