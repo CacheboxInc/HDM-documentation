@@ -35,7 +35,7 @@ Steps for download
 
 1. Log into the HDM appliance by accessing _https://&lt;appliance ip>_ in a supported web browser. 
 2. Select the user profile icon in the top right corner, and choose _Download Debug Logs_ (figure 41).
-3. A zip file named _pio_logs.zip_ will be downloaded. This file can be sent as an attachment for further analysis of the issue.
+3. A zip file named pio_logs.zip will be downloaded. This file can be sent as an attachment for further analysis of the issue.
 
 _Figure 41: Downloading Debug Logs from HDM_
 
