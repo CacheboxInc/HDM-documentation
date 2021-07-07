@@ -38,7 +38,7 @@ The HDM Appliance manages on-premises and cloud HDM operations. This section cov
 
 #### Deployment and Configuration
 
-The HDM appliance must be installed from the OVF in the HDM package. Be sure to check that the placement and sizing of the deploymenUt conforms to the requirements mentioned above. To deploy the appliance, use the “Deploy OVF Template**” **option in vCenter (figure 6).
+The HDM appliance must be installed from the OVF in the HDM package. Be sure to check that the placement and sizing of the deployment conforms to the requirements mentioned above. To deploy the appliance, use the “Deploy OVF Template**” **option in vCenter (figure 6).
 
 _Figure 6: Launching the “Deploy OVF” Template in vCenter_
 
@@ -132,7 +132,7 @@ VMware HA should be enabled on the cluster where the HDM appliance has been depl
 
 ### Step 2 : Add On-Premises vCenter to the HDM Appliance
 
-**Note**: The on-premises vCenter should be added should to the same location where the HDM appliance has been deployed. 
+**Note**: The on-premises vCenter should be added to the same location where the HDM appliance has been deployed. 
 
 Steps:
 
@@ -183,7 +183,7 @@ ifdef(~sTARGET_VCD~e, ~s
 
 ### Step 4: Add HDM License
 
-A license key is required to activate the newly-deployed HDM.  A trial license will be shared with the product which can be used to activate HDM. 
+A license key is required to activate the newly-deployed HDM. A trial license will be shared with the product which can be used to activate HDM. 
 
 **Note**: The HDM configuration page may take a few minutes to load, as product settings need to be initialized. 
 

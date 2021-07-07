@@ -66,11 +66,11 @@ Pre-requisites
 Steps
 
 1. In the on-premises vCenter, right click on the VM to be migrated.
-2. Select the **HDM -> Prepare to Migrate** option
+2. Select the **HDM -> Prepare to Migrate** option.
 
-![alt_text](images/image30.png?classes=content-img "image_tooltip")
+![alt_text](images/image56.png?classes=content-img "image_tooltip")
 
-3. Specify the administrator/root user credentials in the pop-up wizard 
+3. Specify the administrator/root user credentials in the pop-up wizard.
 
 ![alt_text](images/image33.png?classes=content-img "image_tooltip")
 
@@ -102,19 +102,21 @@ Steps
 
 Pre-requisites
 
-1. _Prepare to Migrate_ has been successful on the VM (For warm migration and TBC only)
-2. The HDM SPBM policy has been applied to all disks within the VM (For warm migration and TBC only)
-3. VM migration with multiple CD/DVD Devices is not supported. If you attempt to migrate such a VM an error will be reported. Please remove and retry migration
+1. _Prepare to Migrate_ has been successful on the VM (For warm migration and TBC only).
+2. The HDM SPBM policy has been applied to all disks within the VM (For warm migration and TBC only).
+3. VM migration with maximum 10 CD/DVD devices is supported. If you attempt to migrate a VM with more than 10 CD/DVD devices, an error will be reported. Please remove and retry migration.
 4. Ensure the OS type configured on the vCenter is the same as the actual OS running within the virtual machine. If there is a mismatch, it is very likely; the migration will fail during the commit phase. <!---(Ref: CP-2924)-->
-5. Migration of VMs with “..” (two dots) or spaces (" ") as a substring is not supported. Please rename before migration to ensure a successful migration. <!---(Ref: CP-6033) (Ref:CP-6062) -->
+5. Migration of VMs with “..” (two dots) as a substring is not supported. Please rename before migration to ensure a successful migration. <!---(Ref: CP-6033)-->
 6. Please verify that the MAC ID for the machine is not in use by any VMs already in the cloud. This can happen if you migrate a VM twice or an existing VM with a conflicting ID. <!--- (Ref:- CP-6024) -->
 7. Migrating Windows VMs with an Evaluation License will result in the migrated VM failing the guest OS's license check. The operating system enforces this behavior, and the VM will power off after 45 minutes. This is not an HDM product bug but the license enforcement of Microsoft.
 8. Check for Operating system support against desired migration mode in the table in [appendix](../../appendix#guest-os-support-matrix).
+9. Ensure that the guest OS type within the application VM and at the source vCenter is same. Inconsistency in this may lead to migration failures. <!---(Ref: DP-2953)-->
+10. Migration of VMs with multiple NICs and mix mode of IP allocation (DHCP and Static) during migration is not supported. <!---(Ref: CP-6119)-->
 
 Steps
 
 1. In the on-premises vCenter, right click on the VM to be migrated.
-2. Select the **HDM -> Migrate** option
+2. Select the **HDM -> Migrate** option.
 
 ![alt_text](images/image34.png?classes=content-img "image_tooltip")
 
@@ -122,35 +124,35 @@ Steps
 
 ![alt_text](images/image37.png?classes=content-img "image_tooltip")
 
-4. On the **Select Cloud** page, review the cloud where the VM is to be migrated and ensure that adequate resources are available
+4. On the **Select Cloud** page, review the cloud where the VM is to be migrated and ensure that adequate resources are available.
 
 ![alt_text](images/image36.png?classes=content-img "image_tooltip")
 
 5. Choose the list of VMs to migrate:
     *   Keep the option “Application Dependency” checked. 
-    *   Review the cache size, CPU, and memory required in the cloud
+    *   Review the cache size, CPU, and memory required in the cloud.
 
 ![alt_text](images/image40.png?classes=content-img "image_tooltip")
 
-6. If the Warm and Cold Migration type has been chosen, select the target resources on the cloud where the virtual machine will be migrated
+6. If the Warm and Cold Migration type has been chosen, select the target resources on the cloud where the virtual machine will be migrated.
 ifdef(~sTARGET_VCS~e, ~s
 ![alt_text](images/image38.png?classes=content-img "image_tooltip")
 ~e)
-ifdef(~sTARGET_VCD~e, ~s    * Select the Vapp and storage profile
+ifdef(~sTARGET_VCD~e, ~s    * Select the Vapp and storage profile.
 ![alt_text](images-vcd/image-0.png?classes=content-img "image_tooltip")
 ~e)
-7. If the Warm and Cold Migration type has been selected, map the network for the VM
+7. If the Warm and Cold Migration type has been selected, map the network for the VM.
 ifdef(~sTARGET_VCS~e, ~s
 ![alt_text](images/image39.png?classes=content-img "image_tooltip")
 ~e)
 ifdef(~sTARGET_VCD~e, ~s
-     * Choose DHCP.
-     * Do not choose Static IP or Static Pool, it is not supported in release HDM_VERSION.
+     * Choose DHCP or Static.
+     * Do not choose Static Pool, it is not supported in release HDM_VERSION.
 ![alt_text](images-vcd/image-1.png?classes=content-img "image_tooltip")
 ![alt_text](images-vcd/image-2.png?classes=content-img "image_tooltip")
 ~e)
 
-8. Confirm all selections and select _MIGRATE_
+8. Confirm all selections and select _MIGRATE_.
 
 ![alt_text](images/image41.png?classes=content-img "image_tooltip")
 
@@ -318,6 +320,31 @@ Steps
 ![alt_text](images/image26.png?classes=content-img "image_tooltip")
 
 6. Once the migration back is successful, the VM will be deleted from the cloud vCenter. It will then be moved from the _HDM_MIGRATE_POOL_ to the original resource pool where it resided prior to the migration. At this point, the VM will have to be explicitly powered on.
+
+
+### Steps to migrate Application dependent VMs
+
+1. Create a tag for the Application dependent VMs under HDM-APPLICATION-DEPENDENCY category as shown below:
+
+![alt_text](images/image50.png?classes=content-img "image_tooltip")
+
+2. Assign this tag to all the VMs which are Application dependent:
+
+![alt_text](images/image51.png?classes=content-img "image_tooltip")
+
+![alt_text](images/image52.png?classes=content-img "image_tooltip")
+
+3. In the migration wizard, please make sure to select Application dependency check as shown in the following screen:
+
+![alt_text](images/image53.png?classes=content-img "image_tooltip")
+
+4. The Application dependency VMs with the same tag will get listed in wizard and get differentiated with different color legends as shown in the following screen:
+
+![alt_text](images/image54.png?classes=content-img "image_tooltip")
+
+5. The Application dependent selected VMs can be modified by deselecting Application dependency check:
+
+![alt_text](images/image55.png?classes=content-img "image_tooltip")
 
 
 ## Generating statistical data of migrated VM’s 
