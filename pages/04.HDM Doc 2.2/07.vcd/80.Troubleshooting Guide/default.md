@@ -23,7 +23,7 @@ Dont edit this file directly but make changes in
 to the source document in macros/ 
 -->
 
-This section covers troubleshooting for known issues in HDM 2.2.1. In the event there are issues that are not covered in this document or are not easily resolved, contact PrimaryIO support for assistance. 
+This section covers troubleshooting for known issues in HDM 2.2. In the event there are issues that are not covered in this document or are not easily resolved, contact PrimaryIO support for assistance. 
 
 ## Known Issues
 
@@ -60,13 +60,6 @@ CP-5112: If the on-premises VM remains powered on following a cold or warm migra
 CP-5003: In the migration pop-up, the amount of data transferred and the compression ratio are shown as zero, even though both are running in the background and progress can be seen in the HDM migration task.
 
 CP-5064: Historical IO analysis data is shown for powered-off virtual machines. The viewed timelines are not consistent with the historical timelines.
-
-CP-5119: HDM supports two ARM parallel syncs per HDM cloud cache. If more ARM sync requests are submitted, the following error message will appear in the ARM sync pop-up:
-```
-"Error: PM-523: Failed to post data for sync. Please try again after sometime. 
-{'msg': 'Failed to submit Sync operation for VM.', 'status': -1, 
-  'vm_uuid': 	'192.168.5.228_vm-1040', 'resp': &lt;Response [429]>}"
-```
 
 # HDM Deployment
 
@@ -424,6 +417,39 @@ Premigration checks are done before initiating any migration. For warm or TBC mi
 1. Check prepare-to-migrate step has been run.
 
 If a cdrom drive is not present we will display a warning that a cdrom drive will be added. However if the “prepare-to-migrate” has not been run this warning overrides this check and the migration can proceed. However since the prepare-to-migrate has not been run the migration will eventually fail. (Ref:CP-5713)
+
+
+###### **Warm migration with static IP address allocation fails if the VM has multiple network adapters (minimum 2) connected to the same network. **
+
+This kind of behaviour will be observed when a VM has multiple network
+adapters (Min 2) connected to the same network. If we have different networks then
+there is no issue.
+Due to this behavior, user is not able to assign separate static IP address to such
+networks as shown in screen below :
+
+![alt_text](images/image8.png?classes=content-img "image_tooltip")
+
+**Workaround**
+1. Assign single IP to all the network adapters which are connected to same network.
+2. Migrate VM to cloud without selecting power on option from migration screen.
+3. On cloud (VCD), we can see that the same IP got assigned to both the network adapters. Here we need to update IPs manually by using Edit option.
+
+![alt_text](images/image9.png?classes=content-img "image_tooltip")
+
+4. Power on the VM.
+
+(Ref : **CP-6120**)
+
+
+###### **Post Warm Migration Ubuntu18.04 EFI VM fails to boot on-cloud, in case of Static IP deployment.**
+
+In case of an Ubuntu 18.04 VM, which is deployed in Static mode, it may fail to boot on-cloud post migration. The reason being the Guest OS customization on the VCD environment is not working as expected. This is because Guest OS customization for network configuration is not getting applied inside the Guest OS.
+
+Manual intervention is needed in the current release to configure the
+missing network files inside Guest OS and to allow booting of VM on-cloud.
+Also HDM DHCP mode of deployment can be used instead of Static as a workaround for this problem. (Ref:CP-5956)
+
+
 
 # HDM System Health
 
