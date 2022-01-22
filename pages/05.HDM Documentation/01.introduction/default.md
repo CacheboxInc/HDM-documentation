@@ -87,6 +87,6 @@ _Figure 3: HDM components_
 HDM provides a flexible deployment model to support a wide range of user needs regarding use case, performance, scalability, and security. The detailed steps and options for each deployment method are covered in the **Deployment planning** and subsequent sections. 
 
 ### Deployment Overview of HDM
-[plugin:youtube](https://youtu.be/BtpGR64wLGQ)
+[plugin:youtube](https://youtu.be/i39XhQUZI6A)
 
 
