@@ -22,7 +22,7 @@ to the source document in macros/
 
 PrimaryIO’s HDM provides solutions to perform migrations of VMware based virtual machines from on-premises to VMware based cloud environments.  HDM’s warm migration is a unique technology that decouples VM compute and storage to flexibly move workloads to and from the cloud rapidly and lets you fully control the data.  By combining the integrated smart IO analyzer and our optimized transfer technologies, we can ensure you can start using the cloud immediately instead of waiting days or weeks.
 
-## How Does Hybrid Cloud Data Management (HDM) Work ?
+## How Does Hybrid Cloud Data Management (HDM) Work?
 HDM decouples compute (Virtual Machines - VM) and storage (Virtual Disks - VMDK) functions to quickly and efficiently move workloads to VMware-based cloud providers by identifying the frequently used data (hot dataset) and initially only moving the minimum amount of that data to the cloud. This enables VMs to be migrated and turned up in the cloud provider in the shortest possible timeframe.  
 
 
