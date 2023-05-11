@@ -11,4 +11,3 @@ You will receive an email with the following:
 *   A link to download the PrimaryIO HDM software
 *   A link to training videos
 *   A license key for the software
-
