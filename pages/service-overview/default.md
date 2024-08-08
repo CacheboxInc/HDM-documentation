@@ -100,8 +100,7 @@ virtual machines running on vCenter with the ProtectIO DRaaS Platform.
 > **Primary Site Agnostic**
 >
 > ProtectIO is a solution for protecting and recovering virtual
-> machines. ~~It does not matter which hardware customer is using in
-> primary site.~~ It does not matter which type of primary site customer
+> machines. It does not matter which type of primary site customer
 > has on-premises or IBM Cloud Classic or VPC.
 >
 > **Recovery time / Minimal RPO**
@@ -137,18 +136,6 @@ virtual machines running on vCenter with the ProtectIO DRaaS Platform.
 > Tenant admin can start failover of protected VMs in case of disaster
 > with just one click. No additional steps are required to start a
 > failover.
->
-> **~~Scalable~~**
->
-> ~~ProtectIO requires that the VAIO replication filter is installed on
-> each ESXi host. Customers can increase the number of ESXi hosts to be
-> protected without any additional hardware or software cost.~~
->
-> **~~End to End Security~~**
->
-> ~~Data transfers to and from protected site to DR site use secure
-> replication, which ensures an SSL connection is established and used
-> for all data transfers.~~
 
 **Updated hypervisor based replication**
 
