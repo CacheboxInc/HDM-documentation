@@ -1,0 +1,59 @@
+
+### Ordered List
+
+1. list item 1
+1. list item 2
+    1. list item 2.1
+    1. list item 2.2
+    1. list item 2.3
+1. list item 3
+
+```markdown
+1. list item 1
+1. list item 2
+    1. list item 2.1
+    1. list item 2.2
+    1. list item 2.3
+1. list item 3
+```
+
+### Table
+
+| Name                        | Genre                         | Release date         |
+| :-------------------------- | :---------------------------: | -------------------: |
+| The Shawshank Redemption    | Crime, Drama                  | 14 October 1994      |
+| The Godfather               | Crime, Drama                  | 24 March 1972        |
+| Schindler's List            | Biography, Drama, History     | 4 February 1994      |
+| Se7en                       | Crime, Drama, Mystery         | 22 September 1995    |
+
+```markdown
+| Name                        | Genre                         | Release date         |
+| :-------------------------- | :---------------------------: | -------------------: |
+| The Shawshank Redemption    | Crime, Drama                  | 14 October 1994      |
+| The Godfather               | Crime, Drama                  | 24 March 1972        |
+| Schindler's List            | Biography, Drama, History     | 4 February 1994      |
+| Se7en                       | Crime, Drama, Mystery         | 22 September 1995    |
+```
+
+### Notices
+
+The notices styles are actually provided by the `markdown-notices` plugin but are useful enough to include here:
+
+! This is a warning notification
+
+!! This is a error notification
+
+!!! This is a default notification
+
+!!!! This is a success notification
+
+```markdown
+! This is a warning notification
+
+!! This is a error notification
+
+!!! This is a default notification
+
+!!!! This is a success notification
+```
+
